@@ -1,0 +1,60 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size:12px;
+}
+a.brand {
+    background: url("../img/zf2-logo.png") no-repeat scroll 0 13px transparent;
+    margin-left: 0!important;
+    padding:12px 20px 12px 45px!important;
+    height:5px;
+}
+input, textarea, label, select, .btn {
+    font-size:12px!important;
+}
+input, textarea, label, select {
+    margin:0!important;
+}
+label {
+    margin-top:5px!important;
+}
+.pagination { margin:0; padding:0; height:20px; }
+.pagination ul li a { line-height:28px!important;  font-size:12px!important; }
+.pg label {  margin:5px 10px 0 0!important; color:#999;  }
+
+table { border-top:0!important; }
+table .center {text-align:center!important;}
+table td { padding:4px 7px!important; font-size:12px!important; vertical-align:middle!important;}
+tfoot td { padding:5px!important; background:#EEE; }
+thead td {
+    background:#999;
+    color:#AAA;
+    border-color:#444!important;
+    padding:7px!important;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #363636;
+    background-image: -moz-linear-gradient(top, #444, #222);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444), to(#222));
+    background-image: -webkit-linear-gradient(top, #444, #222);
+    background-image: -o-linear-gradient(top, #444, #222);
+    background-image: linear-gradient(to bottom, #444, #222);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.span9 .span10 input[type="text"],
+.span9 .span10 textarea {
+    width:98%
+}
+.span4 .span12 input[type="text"],
+.span4 .span12 textarea{
+    width:97%
+}
+.span3 .span9 input[type="text"],
+.span3 .span9 textarea {
+    width:90%
+}
+hr { margin:15px 0 15px 0;}
+.badge { margin:0 5px}

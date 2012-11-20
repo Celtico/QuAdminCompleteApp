@@ -1,0 +1,57 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="<?=$this->placeholder('lang')?>">
+<head>
+    <meta charset="utf-8">
+    <?php echo $this->headTitle('QuWebDemo')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+    <!-- Le styles -->
+    <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/images/favicon.ico'))
+    ->prependStylesheet($this->basePath() . '/css/style.css')
+    ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+    ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+
+    <!-- Scripts -->
+    <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+    ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+    ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="<?php echo $this->url('web-demo/url') ?>">QuWebDemo</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <?=$this->partialLoop('qu-web-demo/content/nav.phtml',$this->cont('main-menu','all',false,false))?>
+                    </ul>
+                </div>
+                <div class="nav-collapse collapse lang">
+                    <ul class="nav">
+                        <?=$this->partialLoop('qu-web-demo/content/nav-lang.phtml',$this->cont('languages','all',false,false))?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php echo $this->content; ?>
+    <footer>
+        <ul class="nav">
+            <li> © <strong>QuWebDemo</strong> 2012</li>
+            <?=$this->partialLoop('qu-web-demo/content/nav.phtml',$this->cont('footer','all',false,false))?>
+        </ul>
+    </footer>
+</div>
+<?php echo $this->inlineScript() ?>
+</body>
+</html>

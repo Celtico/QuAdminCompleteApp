@@ -1,0 +1,35 @@
+<h1>Delete</h1>
+<hr>
+<div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h4>Deleting?</h4>
+</div>
+<form action="<?=$this->url($route,array('lang'=>$this->lang,'action'=>'delete','id'=>$this->id))?>" method="post" id="form">
+    <div class="row-fluid">
+        <div class="span9">
+            <? foreach($Delete as $d){?>
+            <div class="row-fluid">
+                <div class="span12">
+                    <?=$this->escapeHtml($d->title)?>
+                    <input type="hidden" name="checkRow[]" value="<?=$d->id?>" />
+                </div>
+            </div>
+            <hr>
+            <? } ?>
+        </div>
+        <div class="span3" >
+            <div class="well" style="background:#fff">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <input class="btn btn-danger" id="submit" style="width:100%; margin-bottom:10px!important;" value="Delete" name="delete" type="submit">
+                        <input class="btn btn-info" id="submitt" style="width:100%;" value="Cancel" name="cancel" type="submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+

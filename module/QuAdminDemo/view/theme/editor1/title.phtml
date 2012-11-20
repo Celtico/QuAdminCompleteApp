@@ -1,0 +1,10 @@
+<?
+    $title = $this->QuNavigation()->getNameActive();
+    if(isset($Rut['title'])){
+     $title = $Rut['title'];
+    }
+    $this->headTitle($title);
+    $this->placeholder('lang')->set($lang);
+?>
+    <h1><?=$title?></h1>
+    <hr>

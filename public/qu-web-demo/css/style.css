@@ -1,0 +1,125 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.brand {
+    background: url("../img/zf2-logo.png") no-repeat scroll 0 12px transparent;
+    margin-left: 0;
+    padding: 10px 20px 10px 40px;
+}
+
+.lang { float:right; }
+.lang ul li a { font-size:11px; padding:2px 15px 2px 15px!important;  margin:8px 1px;  background:#444; -webkit-border-radius:5px;  }
+.lang ul li a:hover { background:#555!important;   }
+.lang ul li.active a { background:#333!important; -webkit-border-radius:5px;   }
+
+footer ul { border-top:solid 1px #cccccc; border-bottom:solid 1px #cccccc; padding:10px 0 10px 0; margin:20px 0 20px 0;  height:20px; }
+footer li  { float:left; margin:0 20px 0  0 ; font-size:12px; }
+
+.summary { font-size:20px; color:#999; line-height:25px; margin:0 0 20px 0;  }
+.image img {  margin:0 0 10px 0;  -webkit-border-radius:5px; }
+img {  -webkit-border-radius:5px; width:100% }
+
+.page-header-content { background:#e1e1e8 }
+
+.grid  h5 {  margin:0 0 0 0; }
+.grid  p { font-size:12px; line-height:16px; color:#999;  }
+.hero-unit h1 { font-size:35px; }
+.hero-unit p {  margin:0!important;  line-height:27px; }
+.description p { font-size:12px!important;  line-height:17px;    }
+.hero-unit {  background:#57a900;  color:#FFF;
+    padding:30px 50px 40px 50px;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    background-color: whiteSmoke;
+    background-image: -moz-linear-gradient(top, white, #E6E6E6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E6E6E6));
+    background-image: -webkit-linear-gradient(top, white, #E6E6E6);
+    background-image: -o-linear-gradient(top, white, #E6E6E6);
+    background-image: linear-gradient(to bottom, white, #E6E6E6);
+    background-repeat: repeat-x;
+    border: 1px solid #BBB;
+    border-color: #E6E6E6 #E6E6E6 #BFBFBF;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-bottom-color: #A2A2A2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.page-header h1 {  line-height:0px; font-size:30px;  }
+.page-header h1 small { display:block; font-size:15px!important; margin-top:25px;  line-height:20px!important;  }
+.content-sub { border-bottom:1px #EEE solid;margin-bottom:15px;  }
+.content-sub h2 { line-height:0px; color:#999; margin-top:50px; margin-bottom:20px; font-size:25px; font-weight:500; }
+.content-sub p { color:#777; }
+
+body { font-size:13px; }
+
+
+form ul {
+    color: #C09853;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #FCF8E3;
+    border: 1px solid #FBEED5;
+    margin:0;
+    padding:10px 10px 4px 10px;
+    -webkit-border-radius:4px;
+    position:relative;
+    top:-17px;
+    z-index:0;
+}
+
+form input, form textarea {
+    position:relative;
+    z-index:1;
+}
+form li {
+    margin:0;
+    color: #C09853;
+    font-size:11px!important;
+    list-style:none;
+}
+form textarea {
+    height:159px;
+}
+
+iframe {
+    width:98%;
+    border:3px solid #333;
+    -webkit-border-radius:5px;
+}
+
+.btn { float:right; }

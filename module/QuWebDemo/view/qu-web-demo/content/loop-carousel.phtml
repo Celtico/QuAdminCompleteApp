@@ -1,0 +1,25 @@
+
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+
+        <?php $count = 0; foreach($content as $c){ $count++; ?>
+
+            <div class="<?php if($count == 1){ echo 'active '; }?>item">
+
+                <?=$this->img($c['documents'],$c['type'],false)?>
+
+                <div class="carousel-caption">
+
+                    <h4><?=$c['title']?></h4>
+                    <p><?=$c['summary']?></p>
+
+                </div>
+            </div>
+
+        <?php } ?>
+
+        </div>
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+

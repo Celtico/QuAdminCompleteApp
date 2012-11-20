@@ -1,0 +1,39 @@
+<?php
+
+    // Header
+    if(strlen($content['title']) > 1)
+    {
+        echo '<div class="page-header">';
+
+        echo '<h1>'.$content['title'].'<br> <small>'.$content['summary'].'</small></h1>';
+
+
+
+
+        $img = $this->img($content['documents'],$content['type'],false);
+
+        if($img){
+
+            $img =  '<p class="image">'.$img.'</p>';
+
+        } else{
+
+            $img =  '';
+
+        }
+
+        // Content
+        if($content['content'])
+        {
+            echo '<div class="row-fluid">
+                    <div class="span12">
+                    '.$img.'
+                    '.$content['content'].'
+                    </div>
+                  </div>';
+        }
+
+        echo '</div>';
+
+
+    }

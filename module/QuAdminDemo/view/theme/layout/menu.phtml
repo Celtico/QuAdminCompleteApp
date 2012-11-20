@@ -1,0 +1,16 @@
+<ul class="nav">
+    <?
+    foreach ($this->container as $page) {
+        if($page->isActive()){
+            $active = ' class="active"';
+        }elseif($page->getRoute() == $this->QuNavigation()->getModuleActive()){
+            $active = ' class="active"';
+        }else{
+            $active = '';
+        }
+        ?>
+        <li <?=$active?>>
+            <?=$this->navigation()->menu()->htmlify($page)?>
+        </li>
+    <? } ?>
+</ul>

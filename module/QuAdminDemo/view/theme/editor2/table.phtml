@@ -1,0 +1,36 @@
+<div id="ajax">
+    <?=$this->render('theme/editor2/ajax.phtml')?>
+</div>
+<script type="text/javascript">
+    $("#npp").change(function () {
+        NumPage();
+    });
+    Sort();
+    function Sort(){
+        var norder = '&n=' + $('#checkAll tbody tr').attr('char') + '&page=<?=$page?>';
+        var fixHelperModified = function(e, tr) {
+            var $originals = tr.children();
+            var $helper = tr.clone();
+            $helper.children().each(function(index)
+            {
+                $(this).width($originals.eq(index).width())
+            });
+            return $helper;
+        };
+        $("tbody").sortable({
+            helper:fixHelperModified,
+            opacity: 0.6,
+            handle: ".handle",
+            start: function(e, ui){
+                ui.placeholder.height(ui.item.height()+1);
+            },
+            update:function (e) {
+                var order = $('#checkAll tbody').sortable('serialize');
+                $('.headLoad').css('display','block');
+                $("#ajax").load('<?php echo $this->url($route,array('action'=>'ajax', 'id' => $id,'lang'=>$lang));?>' + "?" + order + norder, function(){
+                    $('.headLoad').css('display','none');
+                });
+            }
+        }).disableSelection();
+    }
+</script>

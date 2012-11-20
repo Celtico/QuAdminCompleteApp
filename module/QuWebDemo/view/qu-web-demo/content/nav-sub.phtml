@@ -1,0 +1,35 @@
+<?php
+
+$me = array();
+$cont = 0;
+$active = '';
+foreach($menu as $m){
+    $me[] = array('name'=>$m['name'],'title'=>$m['title']);
+    $act = $this->uac($m['name']);
+    if($act != ''){
+        $active = 1;
+    }
+}
+$cont = 0;
+foreach($me as $m){
+$cont++;
+    $action = $this->uac($m['name']);
+    if($cont == 1){
+        if($active == ''){
+            $action = $this->uac($parent);
+        }
+    }
+?>
+<li<?=$action?>>
+    <a href="<?=$this->url('web-demo',array('lang'=>$this->placeholder('lang'),'url'=>$parent,'url2'=>$m['name']))?>">
+        <?=$m['title']?>
+    </a>
+</li>
+<?php } ?>
+
+
+
+
+
+
+

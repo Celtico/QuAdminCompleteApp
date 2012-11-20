@@ -1,0 +1,13 @@
+<?
+    $menu = '';
+    foreach($this->QuLangNav() as $key=>$idiom){
+        $menu .= '
+        <li '.$this->QuActive($key,$lang,' class="active"').'>
+            <a href="/'.$this->QuLangUrl($key).'">
+                '.$idiom.'
+            </a>
+        </li>
+        ';
+    }
+?>
+  <ul class="nav nav-tabs"><?=$menu?></ul>

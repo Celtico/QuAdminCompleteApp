@@ -1,0 +1,23 @@
+<h1><?php echo $this->escapeHtml($this->zfcUserDisplayName($this->user)); ?>'s Profile</h2>
+
+<?php if (isset($this->messages) && count($this->messages) > 0 ): ?>
+<?php foreach ($this->messages as $msg): ?>
+<div class="alert alert-<?php echo $this->escapeHtmlAttr($msg['type']); ?>">
+    <?php if (isset($msg['icon'])) echo '<i class="'.$this->escapeHtmlAttr($msg['icon']).'"></i>&nbsp;'; ?><?php echo $this->escapeHtml($msg['message']); ?>
+</div>
+<?php endforeach; ?>
+<?php endif; ?>
+
+<form action="<?php echo $this->url('zfcuser/profile'); ?>" method="POST">
+<?php
+$FieldSettings = $this->options->getFieldSettings();
+foreach ( $this->sections as $name=>$section ) {
+    $vm = $section->getViewModel();
+    $vm->setVariable('fieldSettings', (array)@$FieldSettings[$name]);
+    $vm->setVariable('user', $this->user);
+
+    echo $this->render($vm);
+}
+?>
+    <input type="submit" value="Save Profile" />
+</form>

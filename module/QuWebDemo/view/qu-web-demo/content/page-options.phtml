@@ -1,0 +1,80 @@
+<?php
+
+    ///////////////////////////////////
+    // Page Options
+    ///////////////////////////////////
+    $loop_content = $this->cont(false,'all',false,$content['id_lang']);
+
+    if(count($loop_content)){
+
+        // Control grid parameter
+        $grid_ok = false;
+        $grid_nu = false;
+        $grid    = explode('-',$content['parameters']);
+
+        if(isset($grid[2]))
+        {
+            $grid_ok = $grid[1];
+            $grid_nu = $grid[2];
+        }
+
+        ///////////////////////////////////
+        // Carousel
+        ///////////////////////////////////
+        if($content['parameters'] == 'loop-carousel'){
+
+            echo $this->partial('qu-web-demo/content/loop-carousel.phtml',array(
+                'content'=>$loop_content
+            ));
+
+        ///////////////////////////////////
+        // Grid
+        ///////////////////////////////////
+        } elseif($grid_ok == 'grid') {
+
+            echo $this->partial('qu-web-demo/content/loop-grid.phtml',array(
+                'content'=>$loop_content,
+                'grid'=>$grid_nu
+            ));
+
+        ///////////////////////////////////
+        // Tabs
+        ///////////////////////////////////
+        } elseif($content['parameters'] == 'loop-tabs'){
+
+            echo $this->partial('qu-web-demo/content/loop-tabs.phtml',array(
+                'content'=>$loop_content
+            ));
+
+        ///////////////////////////////////
+        // Collapse
+        ///////////////////////////////////
+        } elseif($content['parameters'] == 'loop-collapse'){
+
+            echo $this->partial('qu-web-demo/content/loop-collapse.phtml',array(
+                'content'=>$loop_content
+            ));
+
+        ///////////////////////////////////
+        // Page
+        ///////////////////////////////////
+        } elseif($content['parameters'] == 'loop-page'){
+
+            echo $this->partial('qu-web-demo/content/loop-page.phtml',array(
+                'content'=>$loop_content
+            ));
+
+        ///////////////////////////////////
+        // Multi page!!!!
+        ///////////////////////////////////
+        } else {
+
+            foreach($loop_content as $loops_content_next){
+
+                echo  $this->partial('qu-web-demo/content/page-content-sub.phtml',array('content'=>$loops_content_next));
+
+                echo  $this->partial('qu-web-demo/content/page-options.phtml',array('content'=>$loops_content_next));
+
+            }
+        }
+    }

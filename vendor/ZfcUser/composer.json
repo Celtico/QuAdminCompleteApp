@@ -1,0 +1,34 @@
+{
+    "name": "zf-commons/zfc-user",
+    "description": "A generic user registration and authentication module for ZF2. Supports Zend\\Db and Doctrine2.",
+    "type": "library",
+    "keywords": [
+        "zf2"
+    ],
+    "homepage": "https://github.com/ZF-Commons/ZfcUser",
+    "authors": [
+        {
+            "name": "Evan Coury",
+            "email": "me@evancoury.com",
+            "homepage": "http://blog.evan.pro/"
+        },
+        {
+            "name": "Kyle Spraggs",
+            "email": "theman@spiffyjr.me",
+            "homepage": "http://www.spiffyjr.me/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*",
+        "zf-commons/zfc-base": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZfcUser": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}

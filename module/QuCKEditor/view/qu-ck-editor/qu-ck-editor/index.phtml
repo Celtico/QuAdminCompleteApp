@@ -1,0 +1,26 @@
+<?
+    $this->headTitle('Qu CKEditor');
+?>
+<div class="row-fluid">
+    <div class="span12">
+        <h1>Qu CKEditor</h1>
+        <textarea id="editor"></textarea>
+    </div>
+</div>
+<?
+    $this->QuCkEditor(
+        'editor',
+            array('Width' => "100%",
+                 'Height' => "340",
+                 'toolbar'=> array(
+                     array('Source','Maximize'),
+                     array('Templates','Styles','Format'),
+                     array('Bold','Italic','Underline','Subscript','Superscript'),
+                     array('NumberedList','BulletedList','Outdent','Indent'),
+                     array('JustifyLeft','JustifyCenter','JustifyRight'),
+                     array('Link','Unlink'),
+                     array('Image','Table')
+                 )
+            )
+    );
+?>
