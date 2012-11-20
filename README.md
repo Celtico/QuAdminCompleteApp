@@ -11,6 +11,7 @@ Screen Shots
 
 Modules Including
 ========================
+- Zf2
 - ZendSkeletonApplication
 - ZfcBase
 - ZfcUser
