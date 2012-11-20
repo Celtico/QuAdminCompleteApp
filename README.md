@@ -1,10 +1,9 @@
 QuAdminCompleteApp
 ==================================
 
-QuAdmin Beta Version 1.0.0
-Created by Cel Ticó Petit
-
 QuAdmin, complete app, demo admin and web for Zf2
+
+Beta Version 1.0.0 Created by Cel Ticó Petit
 
 Screen Shots
 ==================================
