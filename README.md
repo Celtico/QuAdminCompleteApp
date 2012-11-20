@@ -14,8 +14,11 @@ Modules Including
 - ZendSkeletonApplication
 - ZfcBase
 - ZfcUser
+
 - WebinoImageThumb
 - CdliUserProfile
+- CgmConfigAdmin
+
 - QuElFinder
 - QuCKEditor
 - QuPHPMailer
