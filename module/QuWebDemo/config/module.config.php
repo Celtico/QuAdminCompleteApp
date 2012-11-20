@@ -54,6 +54,7 @@ return array(
         ),
     ),
 
+    // CgmConfigAdmin good module!!!
     'cgmconfigadmin' => array(
         'config_groups' => array(
             'site' => array(

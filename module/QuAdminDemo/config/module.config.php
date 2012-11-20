@@ -162,6 +162,7 @@ return array(
                     ),
                 ),
             ),
+            // CgmConfigAdmin good module!!!
             'cgmconfigadmin' => array(
                 'label' => 'Config Admin',
                 'route' => 'cgmconfigadmin',
@@ -194,6 +195,7 @@ return array(
          'QuBasePath'=>array(
             'QuAdminDemo'       =>'/qu-admin-demo',
             'QuAdmin'           =>'/qu-admin-demo',
+            'QuElFinder'        =>'/qu-admin-demo',
             'ZfcUser'           =>'/qu-admin-demo',
             'CdliUserProfile'   =>'/qu-admin-demo',
             'CgmConfigAdmin'    =>'/qu-admin-demo',
@@ -236,7 +238,7 @@ return array(
                 'URL'           =>  '/uploads/files/',
                 'accessControl' => 'access'
             ),
-            'QuBasePath'=>'/qu-admin-demo/js/plugins/elfinder',
+            'QuBasePath'=>'/js/plugins/elfinder',
         ),
 
         'QuCKEditor' => array(
