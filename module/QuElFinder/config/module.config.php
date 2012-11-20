@@ -52,11 +52,11 @@ return array(
         'QuElFinder'=>array(
             'QuRoots'=>array(
                 'driver'        => 'LocalFileSystem',
-                'path'          =>  dirname(dirname(dirname(__DIR__))) .'/public/uploads/files/',
+                'path'          =>  dirname(dirname(dirname(__DIR__))) .'/web/uploads/files/',
                 'URL'           =>  '/uploads/files/',
                 'accessControl' => 'access'
             ),
-            'QuBasePath'=>'/qu-demo/js/plugins/elfinder',
+            'QuBasePath'=>'/qu-admin/js/plugins/elfinder',
         ),
     ),
     'view_manager' => array(
