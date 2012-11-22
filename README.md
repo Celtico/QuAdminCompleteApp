@@ -34,13 +34,13 @@ Modules Including
 Installation
 ==================================
 - Download and unzip
-- Load the database folder /db
+- Import the database which is inside the folder /db
 - Configure the connection to the database in /config/autoload/global.php
 - Create a virtual host in apache, that points to the folder /public
 
 Coming soon
 ==================================
-- Installation in Composer
-- Loading the documents in drag and drop, and registered in the data base
-- Configuration size images
-- The small changes and corrections
+- Installation with Composer
+- Loading the documents with drag and drop, and registering them on the data base
+- Image resizing tool
+- Small changes and corrections
