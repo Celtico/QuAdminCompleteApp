@@ -41,6 +41,10 @@ Installation
 - The default user and password are admin@admin.com/adminadmin
 - Inside http://your_domain/web-demo you can test how administration of the web page works
 
+Attention with echo formatted server!
+==================================
+- echo / <?=
+
 Coming soon
 ==================================
 - Installation with Composer
