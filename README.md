@@ -3,7 +3,7 @@ QuAdminCompleteApp
 
 QuAdmin, complete app, demo admin and web for Zf2
 
-Beta Version 1.0.0 Created by Cel Ticó Petit
+Beta Version 0.0.0 Created by Cel Ticó Petit
 
 Screen Shots
 ==================================
@@ -28,12 +28,25 @@ Modules Including
 - QuElFinder
 - QuCKEditor
 - QuPHPMailer
+- QuTcPdf
+- QuAdmin
 - QuAdminDemo
 - QuWebDemo
 
-Installation
-==================================
-- Download and unzip
+Installation by Composer
+========================
+Clone git and rename folder, ex. YourFolderProject
+
+In my experience, to avoid errors
+
+- cd /Users/YourName/Desktop/YourFolderProject/
+- /Applications/YourSever/bin/php/php5.3.6/bin/php /Users/YourName/Desktop/YourFolderProject/composer.phar install
+
+In the errors check and install
+
+- http://git-scm.com/downloads
+- http://getcomposer.org/download
+
 - Import the database which is inside the folder /db
 - Configure the connection to the database in /config/autoload/global.php
 - Create a virtual host in apache, that points to the folder /public
@@ -41,13 +54,14 @@ Installation
 - The default user and password are admin@admin.com/adminadmin
 - Inside http://your_domain/web-demo you can test how administration of the web page works
 
+
 Attention with echo formatted server!
 ==================================
 - echo / <?=
 
 Coming soon
 ==================================
-- Installation with Composer
+- Installation with Composer OK!
 - Loading the documents with drag and drop, and registering them on the data base
 - Image resizing tool
 - Small changes and corrections

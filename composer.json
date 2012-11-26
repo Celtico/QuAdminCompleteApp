@@ -1,0 +1,17 @@
+{
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*",
+        "zf-commons/zfc-base": "dev-master",
+        "zf-commons/zfc-user": "dev-master",
+        "webino/webino-image-thumb": "dev-master",
+        "cgm/config-admin":"dev-master",
+        "qu-modules/qu-ckeditor":"dev-master",
+        "qu-modules/qu-elfinder":"dev-master",
+        "qu-modules/qu-phpmailer":"dev-master",
+        "qu-modules/qu-tcpdf":"dev-master",
+        "qu-modules/qu-admin":"dev-master",
+        "qu-modules/qu-webdemo":"dev-master",
+        "qu-modules/qu-admindemo":"dev-master"
+    }
+}
