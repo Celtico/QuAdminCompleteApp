@@ -50,7 +50,7 @@ In my experience, to avoid errors
 ========================
 
 - cd /Users/YourName/Desktop/YourFolderProject/
-- /Applications/YourSever/bin/php/php5.3.6/bin/php /Users/YourName/Desktop/YourFolderProject/composer.phar install
+- /Applications/YourSever/bin/php/php5.3.6/bin/php  /Users/YourName/Desktop/YourFolderProject/composer.phar install
 
 In the errors check and install
 ========================
