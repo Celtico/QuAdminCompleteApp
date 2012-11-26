@@ -3,7 +3,16 @@ QuAdminCompleteApp
 
 QuAdmin, complete app, demo admin and web for Zf2
 
-Beta Version 0.0.0 Created by Cel Ticó Petit
+Release Notes
+========================
+
+0.0.1-dev
+
+- Initiation Demos QuAdmin
+
+0.0.2-dev
+
+- Initiation by composer for better maintenance of all the modules
 
 Screen Shots
 ==================================
@@ -38,15 +47,19 @@ Installation by Composer
 Clone git and rename folder, ex. YourFolderProject
 
 In my experience, to avoid errors
+========================
 
 - cd /Users/YourName/Desktop/YourFolderProject/
 - /Applications/YourSever/bin/php/php5.3.6/bin/php /Users/YourName/Desktop/YourFolderProject/composer.phar install
 
 In the errors check and install
+========================
 
 - http://git-scm.com/downloads
 - http://getcomposer.org/download
 
+The end of the installation
+========================
 - Import the database which is inside the folder /db
 - Configure the connection to the database in /config/autoload/global.php
 - Create a virtual host in apache, that points to the folder /public
