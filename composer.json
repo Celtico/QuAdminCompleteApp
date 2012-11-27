@@ -1,9 +1,10 @@
 {
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.*",
+        "zendframework/zendframework":"dev-master",
         "zf-commons/zfc-base": "dev-master",
         "zf-commons/zfc-user": "dev-master",
+        "cdli/user-profile": "dev-master",
         "webino/webino-image-thumb": "dev-master",
         "cgm/config-admin":"dev-master",
         "qu-modules/qu-ckeditor":"dev-master",
