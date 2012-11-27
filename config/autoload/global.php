@@ -11,24 +11,12 @@
  * file.
  */
 
-    /* php vendor/zf2/bin/classmap_generator.php -l ./module/QuPHPMailer/src/PHPMailer/ -o ./module/QuPHPMailer/autoload_classmap.php
-     * Ftp
-     * User: bvland
-     * Password: SNyU68tp
-     * Host: ftp.bvland.com.mialias.net
-     *
-     * Mysql
-     * User: mybvland
-     * Password: 9puLs2Ua
-     * Host: localhost
-     * db: bvland
-    */
 return array(
     'db' => array(
         'driver' => 'Pdo',
         'dsn'            => 'mysql:dbname=quadmin;hostname=localhost',
         'username'       => 'root',
-        'password'       => 'estacio8',
+        'password'       => '',
         'driver_options' => array(
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ),

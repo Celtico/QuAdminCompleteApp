@@ -44,19 +44,18 @@ Modules Including
 
 Installation by Composer
 ========================
-Clone git and rename folder, ex. YourFolderProject
+See the information if not known composer and clone git
+=========================================================
+- http://git-scm.com
+- http://getcomposer.org
 
-In my experience, to avoid errors
-========================
-
-- cd /Users/YourName/Desktop/YourFolderProject/
-- /Applications/YourSever/bin/php/php5.3.6/bin/php  /Users/YourName/Desktop/YourFolderProject/composer.phar install
-
-In the errors check and install
-========================
-
-- http://git-scm.com/downloads
-- http://getcomposer.org/download
+```
+cd /Users/YourName/Desktop/YourFolderProject/
+git clone git://github.com/Celtico/QuAdminCompleteApp.git
+cd QuAdminCompleteApp
+php composer.phar self-update
+php composer.phar install
+```
 
 The end of the installation
 ========================
@@ -68,9 +67,10 @@ The end of the installation
 - Inside http://your_domain/web-demo you can test how administration of the web page works
 
 
-Attention with echo formatted server!
+Notes (<?=)
 ==================================
-- echo / <?=
+PHP < 5.4.0 short_open_tag On
+http://php.net/manual/en/ini.core.php
 
 Coming soon
 ==================================
