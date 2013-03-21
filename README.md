@@ -1,3 +1,7 @@
+
+This version has bugs, I'll update soon
+==================================
+
 QuAdminCompleteApp
 ==================================
 
