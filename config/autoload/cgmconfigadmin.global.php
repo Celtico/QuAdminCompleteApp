@@ -14,8 +14,7 @@ $configGroups = array(
 // Config Options
 //
 $configOptions = array(
-
-    /*
+/*
     'group1' => array(
         //
         // Simple Options
@@ -26,6 +25,7 @@ $configOptions = array(
         'or-dashes'       => false,
         'or_underscores'  => true,
         'simpleText'      => 'Some text',
+        'simpleNumber'    => '50',
         'simpleSelect'    => array('Foo', 'Bar', 'Dev', 'Null'),
     ),
 
@@ -46,7 +46,11 @@ $configOptions = array(
             'default_value' => 'My Site',
         ),
 
-
+        'numberOption' => array(
+            'input_type'    => 'number',
+            'label'         => 'Number Option',
+            'default_value' => '10',
+        ),
     ),
 
     'group3' => array(
@@ -77,7 +81,7 @@ $configOptions = array(
             'default_value' => 'Fall',
         ),
     ),
-    */
+*/
 );
 
 $settings = array(
@@ -90,9 +94,7 @@ $settings = array(
     'config_groups'  => array(
         'site' => $configGroups,
     ),
-
 );
-
 
 return array(
     'cgmconfigadmin' => $settings,

@@ -1,0 +1,58 @@
+
+#elfinder input[type="text"] {
+    width:auto!important;
+}
+#elfinder label{
+    font-size:12px!important;
+}
+.ui-helper-reset, #elfinder {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.ui-widget-header {
+    border: 1px solid #FFF!important;
+    padding: 10px  10px  5px  10px!important;
+    background: #f4f4f4!important;
+}
+.elfinder .elfinder-navbar {
+    background: rgb(241, 241, 241)!important;
+}
+.elfinder-cwd-icon {
+    height: 52px!important;
+}
+.elfinder-cwd-wrapper {
+
+}
+.ui-dialog {
+    padding:1px!important;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.elfinder-resize-rotate-slider {
+    width:180px!important;
+    background: #fff!important;
+}
+.elfinder-cwd {
+
+}
+#elfinder  .elfinder-button-search input[type="text"]  {
+    width:159px!important;
+    border: 0;
+
+}
+#elfinder  .elfinder-button-search .ui-icon{
+    left: 3px;
+    top: 13px;
+}
+#elfinder  .elfinder-button-search .ui-icon-close {
+    left:171px
+}
+.ui-widget-content {
+    border:0!important;
+}
+.elfinder-toolbar .elfinder-buttonset .elfinder-button {
+    background:transparent!important;
+}

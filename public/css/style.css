@@ -1,37 +1,101 @@
 body {
-    padding-top: 60px;
     padding-bottom: 40px;
 }
-
-.zf-green {
-    color: #68b604;
+.navbar .brand {
+    font-weight:bold;
+    color: rgba(0, 0, 0, 0.22);
 }
 
-.btn-success {
-  background-color: #57a900;
-  background-image: -moz-linear-gradient(top, #70d900, #57a900);
-  background-image: -ms-linear-gradient(top, #70d900, #57a900);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
-  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
-  background-image: -o-linear-gradient(top, #70d900, #57a900);
-  background-image: linear-gradient(top, #70d900, #57a900);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+footer {
+    font-size:12px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.navbar-static-top {
+    position: static;
+    width:auto;
+    margin-bottom: 0;
 }
 
-.btn-success:hover,
-.btn-success:active,
-.btn-success.active,
-.btn-success.disabled,
-.btn-success[disabled] {
-  background-color: #57a900;
+.home-temp {
+    background:rgb(27, 83, 114);
+    color:#fff;
+    text-align:center;
+    padding:100px 0 100px 0;
+    margin-bottom:50px;
+    text-shadow:0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.home-temp-in  {
+    background:rgb(27, 83, 114);
+    margin-bottom:20px;
+
+}
+.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    margin:0!important;
 }
 
-.btn-success:active, .btn-success.active {
-  background-color: #57a900;
+.home-temp-in .span12 {
+    color:#fff;
+    padding:20px 20px 0px 20px;
+
+
+}
+pre {
+font-size:10px;
+
+}
+.well {
+    text-align:center;
+    border:0;
+}
+/* Large desktop */
+@media (min-width: 1200px) {}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .navbar .btn-navbar {
+        float:left!important;
+    }
+
+
 }
 
-div.container a.brand {
-    background: url("../images/zf2-logo.png") no-repeat scroll 0 10px transparent;
-    margin-left: 0;
-    padding: 8px 20px 12px 40px;
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+    .navbar .btn-navbar {
+        float:left!important;
+    }
+    .test .plupload_header_title {
+        font: normal 12px sans-serif!important;
+        padding: 15px 15px 3px 0!important;
+    }
+    h2 {
+        font-size:25px!important;
+        line-height:25px!important;
+    }
+
+    body {
+
+        padding:0!important;
+    }
+
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    h1 {
+       font-size:25px;
+    }
+    h1 small {
+        font-size:12px;
+    }
+
+
 }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {  }
+
+

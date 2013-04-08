@@ -1,35 +1,30 @@
 <?php
 return array(
     'modules' => array(
-
-        //*** App
         'Application',
 
-        //*** Your Webs
-        'QuWebDemo',
-
-        //*** QuModules Utilities
-	    'QuElFinder',
-        'QuCKEditor',
-        'QuPHPMailer',
 
 
-        //*** Extra Modules Provider
-        'WebinoImageThumb',
+        'CgmConfigAdmin',
         'ZfcBase',
         'ZfcUser',
         'CdliUserProfile',
-        'CgmConfigAdmin',
 
-        //*** QuModules Administrator
+        'QuDemo',
+        'QuPlupload',
+        'QuElFinder',
+        'QuCKEditor',
+        'QuPHPMailer',
+        'QuTcPdf',
+        'WebinoImageThumb',
+
+        'QuSystem',
+        'QuWebDemo',
         'QuAdminDemo',
         'QuAdmin',
 
-        //*** Security
-        //'BjyAuthorize',
-    ),
 
-    //*** AutoLoader
+    ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
             'config/autoload/{,*.}{global,local}.php',
@@ -40,5 +35,3 @@ return array(
         ),
     ),
 );
-
-
