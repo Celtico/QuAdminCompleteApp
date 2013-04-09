@@ -1,5 +1,5 @@
 This version has bugs that are small am waiting to solve
-Thank you!
+Thank!
 ==================================
 
 QuAdminCompleteApp
