@@ -38,20 +38,15 @@ $(function() {
 
 });
 
-/*
-oTable = $('table').dataTable({
-    "bJQueryUI": false,
-    "bAutoWidth": false,
-    "sPaginationType": "full_numbers",
-    "sDom": '<"H"fl>t<"F"ip>'
-});
-*/
-
-$('table').dataTable({
-    "bPaginate": false,
-    "bLengthChange": false,
-    "bFilter": false,
-    "bSort": true,
-    "bInfo": false,
-    "bAutoWidth": false
-});
+initTable();
+function initTable ()
+{
+    return $('table').dataTable( {
+        "bPaginate": false,
+        "bLengthChange": false,
+        "bFilter": false,
+        "bSort": true,
+        "bInfo": false,
+        "bAutoWidth": false
+    } );
+}

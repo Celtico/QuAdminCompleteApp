@@ -25,12 +25,15 @@ ul{
     padding:0;
 }
 li { list-style:none }
+
+/*
 .header {
     min-width:860px!important;
 }
 .container-fluid {
     min-width:860px!important;
 }
+*/
 .container-fluid {
     padding:0;
 }
@@ -109,7 +112,7 @@ header ul.navigation li ul  {
     transition: all 0.3s ease;
 }
 header ul.navigation li:hover a {
-   color:#000;
+    color:#000;
 }
 header ul.navigation li:hover  li a {
     color:#999;
@@ -344,7 +347,7 @@ header ul.navigation li a .iconb {
     color:#555;
     font-size:14px;
     font-weight:bold;
-    padding:25px 20px 20px 20px;
+    padding:23px 20px 22px 20px;
     margin:0;
     line-height:18px;
 }
@@ -374,15 +377,18 @@ ul.breadcrumbs > li:first-child {
     background:none;
 }
 ul.breadcrumbs li a {
-    color: #666666;
+    color: rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 0  rgba(0, 0, 0,0.2);
+    letter-spacing:1px;
     text-decoration: none;
-    padding: 0 20px 0 40px;
+    padding:4px 20px 2px 40px;
     margin: 0;
-    background: rgb(219, 219, 219);
+    background:rgb(131, 131, 131);
+    background: url(../img/ios-linen.jpg);
+    background: rgb(83, 83, 86);
     float: left;
     display: block;
     height: auto;
-    line-height: 28px;
     position: relative;
 
 }
@@ -396,9 +402,10 @@ ul.breadcrumbs li a {
 }
 ul.breadcrumbs li .arrow-r:before {
     content: '';
-    border:15px solid transparent;
-    border-left:15px solid rgb(219, 219, 219);
-    right:1px;
+    border:14px solid transparent;
+    border-left:14px solid rgb(83, 83, 86);
+    right:2px;
+    top:1px;
     z-index:21;
     position:absolute;
 
@@ -406,10 +413,10 @@ ul.breadcrumbs li .arrow-r:before {
 }
 ul.breadcrumbs li .arrow-r:after {
     content: '';
-    border:15px solid transparent;
-    border-left:15px solid  rgb(190, 190, 190);
-    right:0;
-    top:0;
+    border:14px solid transparent;
+    border-left:14px solid rgb(0, 0, 0);
+    right:1px;
+    top:1px;
     z-index:20;
     position:absolute;
 
@@ -423,7 +430,9 @@ ul.breadcrumbs li.active .arrow-r:after
 }
 ul.breadcrumbs li.active a {
     background:none;
-    color:#6A6A6A!important;
+    color: rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 0  rgba(0, 0, 0,0.2);
+
 }
 .breadcrumbs .sub-menu-p2 {
     font-size:12px!important;
@@ -436,12 +445,9 @@ ul.breadcrumbs li.active a {
 }
 .crumb {
     height: 28px;
-    box-shadow: 0 1px 0 #fff, 0 1px 0 #fff inset;
-    -webkit-box-shadow: 0 1px 0 #fff, 0 1px 0 #fff inset;
-    -moz-box-shadow: 0 1px 0 #fff, 0 1px 0 #fff inset;
-    background: url(../img/breadcrumbs.png) repeat-x;
+    background: url(../img/pattern8.jpg);
     border-top: 1px solid #c3c3c3;
-    border-bottom: 1px solid #c3c3c3;
+    border-bottom: 1px solid #FFF;
     font-size: 11px;
     color: #FFF;
 }
@@ -455,6 +461,7 @@ ul.breadcrumbs li.active a {
     background:url(../img/subtle-pattern-1.jpg);
     padding-bottom:50px;
     position: relative;
+
     z-index:2;
 }
 .bg {
@@ -626,8 +633,15 @@ textarea {
     background: -ms-linear-gradient(top, #F8F8F8 0%, #EFEFEF 100%);
     background: linear-gradient(top, #F8F8F8 0%, #EFEFEF 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#efefef',GradientType=0 );
-
-
+    /*
+        background-color: #fafafa;
+        background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+        background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+        background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+        background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+        background-repeat: repeat-x;
+        */
     /*
     background: -moz-linear-gradient(top, #eeefef 0%, #dfdfdf 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeefef), color-stop(100%, #dfdfdf));
@@ -656,21 +670,6 @@ table {
     padding:9px 8px 3px 8px;
 
 }
-.table th .btn,
-.table td .btn {
-position:relative;
-top:-2px;
-    padding:3px 10px 2px 10px!important;
-}
-.table td .css-dropdown
-{
-    padding:3px 10px 3px 10px!important;
-    border-right:0;
-}
-
-.count-label {
-   width:85%;
-}
 
 /*
 .label {
@@ -681,40 +680,41 @@ top:-2px;
 }
 */
 .btn {
+    /*
+        border: 1px solid #d3d3d3;
+        cursor: pointer;
+        color: rgba(96, 96, 96, 0.87);
+        font-size: 12px;
 
-    border: 1px solid #d3d3d3;
-    cursor: pointer;
-    color: rgba(96, 96, 96, 0.87);
-    font-size: 12px;
+        line-height: 14px;
 
-    line-height: 14px;
-
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-
-
-    border: 1px solid #d8d8d8;
-    color: #808080;
-    text-shadow: 0 1px #f5f5f5;
-    background: #fcfcfc;
-    background: -moz-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f1f1f1));
-    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
-    background: -o-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
-    background: -ms-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
-    background: linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f1f1f1',GradientType=0 );
-    border: 1px solid #d2d2d2;
-
-    box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
-    -webkit-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
-    -moz-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
+        border-radius:4px;
+        -webkit-border-radius:4px;
+        -moz-border-radius:4px;
 
 
+        border: 1px solid #d8d8d8;
+        color: #808080;
+        text-shadow: 0 1px #f5f5f5;
+        background: #fcfcfc;
+        background: -moz-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f1f1f1));
+        background: -webkit-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
+        background: -o-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
+        background: -ms-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
+        background: linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f1f1f1',GradientType=0 );
+        border: 1px solid #d2d2d2;
+
+        box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
+        -webkit-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
+        -moz-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
+
+    */
 }
+
 .botons .btn {
-    line-height: 20px;
+
 }
 
 table td  .dropdown-menu  a {
@@ -816,6 +816,8 @@ tfoot td{
     background: linear-gradient(top, #eeefef 0%, #dfdfdf 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeefef', endColorstr='#dfdfdf',GradientType=0 );
     */
+
+
 }
 
 .pagination {
@@ -890,6 +892,11 @@ textarea {
     font-size:13px!important;
 }
 
+.alert  {
+    position:relative;
+    top:-5px;
+}
+
 .alert p {
     margin:5px;
     padding:0;
@@ -925,18 +932,10 @@ table td a {
     padding:0!important;
 }
 
-.selector, .radio, .checker, .uploader, .selector *, .radio *, .checker *, .uploader *{ margin: 0; padding: 0; cursor: pointer; }
-
-div.selector { background: #fcfcfc; background: -moz-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f1f1f1)); background: -webkit-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%); background: -o-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%); background: -ms-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%); background: linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f1f1f1',GradientType=0 ); border: 1px solid #D2D2D2; line-height: 27px; height: 27px; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; -ms-box-sizing: content-box;  border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee; -webkit-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee; -moz-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee; display: -moz-inline-box; display: inline-block; vertical-align: middle; zoom: 1; margin: 0; padding: 0 0 0 8px; cursor: pointer; width: auto; max-width: 280px; font-size: 12px; position: relative; overflow: hidden; }
-div.selector span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #808080; text-shadow: 0 1px #f5f5f5; padding: 0px 37px 0px 2px; background: url(../img/selectArrow.png) no-repeat 100%; cursor: pointer; font-size: 11px; height: 27px; line-height: 27px; }
-div.selector select { position: absolute; opacity: 0; filter: alpha(opacity:0); height: 28px; border: none; background: none; font-family: Arial, Helvetica, sans-serif; font-size: 12px; border: solid 1px white; width: 100%; top: 0px; left: 0px; }
-.disabled { opacity: 0.6; filter: alpha(opacity=60);; }
-.labelDisabled { color: #B7B7B7; }
 
 /* Checkboxes */
 
-.checker { width: 16px; height: 16px; position: relative; display: -moz-inline-box; display: block; vertical-align: middle; zoom: 1; float: left; margin-top: 2px; margin-right: 10px; box-shadow: 0 1px 0 #fff; -webkit-box-shadow: 0 1px 0 #fff; -moz-box-shadow: 0 1px 0 #fff; }
-.checker input { width: 16px; height: 16px; opacity: 0; filter: alpha(opacity:0); display: inline-block; background: none; }
+.checker input { opacity: 0; }
 .checker span { background: url(../img/checkboxes.png) no-repeat 0 0; height: 16px; width: 16px; display: -moz-inline-box; display: inline-block; text-align: center; }
 .checker span.checked { background-position: 0 -17px; }
 
@@ -1291,7 +1290,7 @@ td .checker,
     display: block;
     top: 0;
     left: 0;
-    padding:23px 9px 22px 9px;
+    padding:23px 8px 15px 8px;
     border-right: 1px solid #DDD;
 }
 
@@ -1487,52 +1486,86 @@ td .checker,
 #checkAll_filter,
 #checkAll_info,
 #checkAll_paginate{
-display:none;
+    display:none;
 }
 
 
-.dataTables_empty {
-    background: url(../img/ios-linen.jpg)!important;
-    font-size:30px;
-    padding:100px 0 100px 0!important;
-    text-align:center!important;
-    color: rgba(255, 255, 255, 0.12);
-    font-weight: bold;
-    text-shadow: 0 -1px 0 #000;
-}
+
 
 .Unnamed {
     color: #ff919c;
     padding:0!important;
 }
+.nav-actions-absolute {
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+}
+.nav-actions-height {
+    height:60px;
+}
+
+
 .nav-actions  {
-    border-bottom:1px solid #DDD;
-    height:40px;
-    margin-bottom:23px;
-    padding-bottom:10px;
+    position:relative;
+    left:0;
+    border-top:1px solid #DDD;
+    border-bottom:1px solid #CCC;
+    padding:15px 30px 17px 30px;
+    text-shadow:0 1px 0 #FFF;
+
 }
 .nav-actions .title-nav {
     font-weight:bold;
-    font-size:15px;
-    color:#333;
-    margin-top:13px;
+    font-size:17px;
+    margin-top:4px;
+    color: rgba(0, 0, 0, 0.70);
     float:left;
 }
+
+.title-nav  a {
+    color: rgba(0, 0, 0, 0.70);
+}
+.title-nav a .iconb:hover {
+    color: rgba(0, 0, 0, 0.30);
+}
+.title-nav a .iconb {
+    margin-right:10px;
+    position:relative;
+    top:0;
+    font-size:13px;
+
+}
+
 .nav-actions .buttons-nav {
     float:right;
 }
 .nav-actions .languages {
-    float:right; margin-right:40px;
+    float:right;
+    margin-right:40px;
 }.nav-actions .languages li {
-    float:left;
+     float:left;
  }
 
+.btn {
+    font-size:13px;
+    border-radius:100px!important;
+    border:0!important;
+    border-top:1px solid rgba(255, 255, 255, 0.5)!important;
+    box-shadow:0 1px 0 rgba(0, 0, 0, 0.2) ;
+    line-height:23px;
+}
+
+td .btn  {
+    box-shadow:0 0 0 rgba(0, 0, 0, 0.2);
+}
 .nav-actions .languages li.active  a {
     font-weight:normal!important;
 }
 
 .nav-actions .languages li a:hover {
-    color:#000;
+
 }
 
 .error {
@@ -1540,9 +1573,9 @@ display:none;
 }
 
 .error li {
-     font-size:11px;
-     color:rgb(204, 0, 20) !important
- }
+    font-size:11px;
+    color:rgb(204, 0, 20) !important
+}
 
 .close {
     background: rgb(48, 48, 48)!important;
@@ -1568,4 +1601,46 @@ ul.map {
     margin:0 0 0 20px;
     border-left:1px solid #c3c3c3;
 
+}
+.table tbody td {
+    padding:6px 6px 0 6px!important;
+}
+.table tbody td.tableArrows {
+    padding:6px 0 0 0!important;
+}
+
+.table td .btn {
+
+    position:relative;
+    top:-3px;
+    padding:3px 0 2px 0!important;
+    margin:0!important;
+    font-size:16px!important;
+    border:0!important;
+    width:34px;
+    border-radius:0!important;
+    background:none!important;
+    color:#444;
+}
+
+
+
+.tableActs {
+    text-align:center;
+    padding:0!important;
+
+}
+
+
+.count-label {
+    width:85%;
+}
+.table td.dataTables_empty {
+    background: url(../img/ios-linen.jpg)!important;
+    font-size:30px;
+    padding:100px 0 100px 0!important;
+    text-align:center!important;
+    color: rgba(255, 255, 255, 0.12);
+    font-weight: bold;
+    text-shadow: 0 -1px 0 #000;
 }
