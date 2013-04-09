@@ -1,4 +1,6 @@
-Tested the installation with the composer, ie had to make some adjustments to routes and something more, and now everything works properly!
+Tested the installation with the composer, ie had to make some adjustments 
+to routes and something more, and now everything works properly!
+
 thanks
 
 QuAdminCompleteApp
