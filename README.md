@@ -1,6 +1,8 @@
-This version has bugs that are small am waiting to solve.
-Thank!
+Hello!
 
+I tested the installation with the composer, ie had to make some adjustments to routes and something more, and now everything works properly!
+
+thanks
 
 QuAdminCompleteApp
 ==================================
