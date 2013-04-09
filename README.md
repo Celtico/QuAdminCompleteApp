@@ -1,7 +1,7 @@
-Tested the installation with the composer, ie had to make some adjustments 
-to routes and something more, and now everything works properly!
+Tested the installation with the composer, ie had to make some adjustments to routes and something more, and now everything works properly!
 
-thanks
+This version has bugs that are small am waiting to solve.
+Thank!
 
 QuAdminCompleteApp
 ==================================
@@ -28,8 +28,6 @@ Screen Shots
 
 QuAdmin
 
-![Example screenshot](http://qumodules.com/inc3.png)
-![Example screenshot](http://qumodules.com/inc.png)
 ![Example screenshot](http://qumodules.com/inc2.png)
 
 QuDemoWeb
@@ -63,7 +61,7 @@ Modules Including
 Installation by Composer
 ========================
 See the information if not known composer and clone git
-=========================================================
+
 - http://git-scm.com
 - http://getcomposer.org
 
@@ -81,13 +79,6 @@ The end of the installation
 - Configure the connection to the database in /config/autoload/global.php
 - Create a virtual host in apache, that points to the folder /public
 - Once everything is set up enter http://your_domain/admin-demo, it will ask you to login.
-- The default user and password are admin@admin.com/adminadmin
+- The default user and password are Email:admin@admin.com Password:adminadmin
 - Inside http://your_domain/web-demo you can test how administration of the web page works
 
-
-Coming soon
-==================================
-- Installation with Composer - OK!
-- Loading the documents with drag and drop, and registering them on the data base - OK
-- Image resizing tool - OK
-- Small changes and corrections - OK Big changes And neither will many more ....
