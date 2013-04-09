@@ -1,6 +1,6 @@
-This version has bugs that are small am waiting to solve
+This version has bugs that are small am waiting to solve.
 Thank!
-==================================
+
 
 QuAdminCompleteApp
 ==================================
