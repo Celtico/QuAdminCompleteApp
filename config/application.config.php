@@ -3,14 +3,11 @@ return array(
     'modules' => array(
         'Application',
 
-
-
         'CgmConfigAdmin',
         'ZfcBase',
         'ZfcUser',
         'CdliUserProfile',
 
-        'QuDemo',
         'QuPlupload',
         'QuElFinder',
         'QuCKEditor',
