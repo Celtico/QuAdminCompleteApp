@@ -1,4 +1,3 @@
-
 This version has bugs, I'll update soon
 ==================================
 
@@ -18,16 +17,27 @@ Release Notes
 
 - Initiation by composer for better maintenance of all the modules
 
+- 0.0.3-dev
+
+Big changes, soon more documentation
+
 Screen Shots
 ==================================
 
-QuDemoAdmin
+QuAdmin
 
-![QuDemo example screenshot](http://cenics.cat/quadmin1.png)
-![QuDemo example screenshot](http://cenics.cat/quadmin2.png)
+![Example screenshot](http://qumodules.com/inc3.png)
+![Example screenshot](http://qumodules.com/inc.png)
+![Example screenshot](http://qumodules.com/inc2.png)
 
 QuDemoWeb
 ![QuDemo example screenshot](http://cenics.cat/quwebdemo.jpg)
+
+
+Demo example
+==================================
+http://qumodules.com/quadmin
+
 
 Modules Including
 ==================================
@@ -45,6 +55,8 @@ Modules Including
 - QuAdmin
 - QuAdminDemo
 - QuWebDemo
+- QuSystem
+- QuPlupload
 
 Installation by Composer
 ========================
@@ -71,14 +83,9 @@ The end of the installation
 - Inside http://your_domain/web-demo you can test how administration of the web page works
 
 
-Notes (<?=)
-==================================
-PHP < 5.4.0 short_open_tag On
-http://php.net/manual/en/ini.core.php
-
 Coming soon
 ==================================
 - Installation with Composer - OK!
-- Loading the documents with drag and drop, and registering them on the data base
-- Image resizing tool
-- Small changes and corrections
+- Loading the documents with drag and drop, and registering them on the data base - OK
+- Image resizing tool - OK
+- Small changes and corrections - OK Big changes And neither will many more ....
