@@ -18,9 +18,9 @@ Release Notes
 
 - Initiation by composer for better maintenance of all the modules
 
-- 0.0.3-dev
+0.0.3-dev
 
-Big changes, soon more documentation
+- Big changes, soon more documentation
 
 Screen Shots
 ==================================
