@@ -1,4 +1,5 @@
-This version has bugs, I'll update soon
+This version has bugs that are small am waiting to solve
+Thank you!
 ==================================
 
 QuAdminCompleteApp
