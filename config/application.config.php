@@ -1,25 +1,29 @@
 <?php
 return array(
     'modules' => array(
+
+        //Zend Skeleton Application
         'Application',
 
+        //Providers
         'CgmConfigAdmin',
         'ZfcBase',
         'ZfcUser',
         'CdliUserProfile',
+        'WebinoImageThumb',
 
+        //Qu providers
         'QuPlupload',
         'QuElFinder',
         'QuCKEditor',
         'QuPHPMailer',
         'QuTcPdf',
-        'WebinoImageThumb',
 
+        //Qu developed
         'QuSystem',
         'QuWebDemo',
         'QuAdminDemo',
         'QuAdmin',
-
 
     ),
     'module_listener_options' => array(

@@ -32,10 +32,10 @@ return array(
         'QuLayout'=>array(
             'QuAdmin'           =>'qu-admin/layout/qu-admin-layout',
             'CdliUserProfile'   =>'qu-admin/layout/qu-admin-layout',
-            'ZfcUser'           =>'qu-admin/layout/qu-admin-layout',
+            'ZfcUser'           =>'qu-admin/layout/qu-admin-login',
         ),
 
-        'qu_admin_layout_login' => 'qu-admin/layout/qu-admin-login',
+
 
 
         // NAMESPACE Base Path Module
@@ -52,6 +52,9 @@ return array(
             //'ZfcUser'           =>true,
             'CdliUserProfile'   =>true,
         ),
+
+        // Only is active redirect QuAdmin
+        'qu_admin_layout_login' => 'qu-admin/layout/qu-admin-login',
 
         // QuFlashMessenger css
         'QuFlashMCss'=> 'alert',
