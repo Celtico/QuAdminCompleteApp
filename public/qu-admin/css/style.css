@@ -38,12 +38,25 @@ li { list-style:none }
     padding:0;
 }
 header{
-    background:url(../img/pattern8.jpg);
+    background:url(../img/patterns/Patterns11.jpg);
     height:58px;
     padding:0 0 0 0;
     position:relative;
     z-index:3;
 }
+header ul.navigation ul li.active  {
+    opacity:1;
+    background:url(../img/patterns/Patterns11.jpg);
+}
+.crumb {
+    height: 28px;
+    background: url(../img/patterns/Patterns11.jpg);
+    border-top: 1px solid #c3c3c3;
+    border-bottom: 1px solid #FFF;
+    font-size: 11px;
+    color: #FFF;
+}
+
 .logo {
     padding: 17px 20px 0 24px;
     font-size: 22px;
@@ -151,10 +164,7 @@ header ul.navigation li:hover ul  {
     opacity:1;
     padding:7px 0 7px 0;
 }
-header ul.navigation ul li.active  {
-    opacity:1;
-    background:url(../img/pattern8.jpg);
-}
+
 header ul.navigation ul li.active  a {
     color:#FFF;
 }
@@ -430,7 +440,7 @@ ul.breadcrumbs li.active .arrow-r:after
 }
 ul.breadcrumbs li.active a {
     background:none;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.5);
     text-shadow: 0 1px 0  rgba(0, 0, 0,0.2);
 
 }
@@ -442,14 +452,6 @@ ul.breadcrumbs li.active a {
     margin-right:10px!important;
     top:2px!important;
     text-shadow:1px 1px #fff;
-}
-.crumb {
-    height: 28px;
-    background: url(../img/pattern8.jpg);
-    border-top: 1px solid #c3c3c3;
-    border-bottom: 1px solid #FFF;
-    font-size: 11px;
-    color: #FFF;
 }
 
 #content {
@@ -1071,9 +1073,7 @@ li.plupload_droptext {
     margin-bottom:4px;
 }
 
-.PluploadLoad {
-    background:url(../img/top.jpg);
-}
+
 .PluploadLoad .iconb,
 .PluploadLoad  img,
 .PluploadLoad .name,
@@ -1514,12 +1514,13 @@ td .checker,
     border-bottom:1px solid #CCC;
     padding:15px 30px 17px 30px;
     text-shadow:0 1px 0 #FFF;
+    background: url(../img/subtle-pattern-1.jpg);
 
 }
 .nav-actions .title-nav {
     font-weight:bold;
     font-size:17px;
-    margin-top:4px;
+    margin-top:9px;
     color: rgba(0, 0, 0, 0.70);
     float:left;
 }
@@ -1609,11 +1610,10 @@ ul.map {
     padding:6px 0 0 0!important;
 }
 
-.table td .btn {
+.table td.tableActs .btn {
 
     position:relative;
-    top:-3px;
-    padding:3px 0 2px 0!important;
+    padding:4px 0 4px 0!important;
     margin:0!important;
     font-size:16px!important;
     border:0!important;
@@ -1623,13 +1623,19 @@ ul.map {
     color:#444;
 }
 
+.table td.td-child .btn {
 
-
-.tableActs {
-    text-align:center;
-    padding:0!important;
+    position:relative;
+    padding:4px 0 4px 0!important;
+    margin:0!important;
+    font-size:12px!important;
+    font-weight:bold;
+    border:0!important;
+    width:100%;
+    border-radius:5px!important;
 
 }
+
 
 
 .count-label {
@@ -1643,4 +1649,11 @@ ul.map {
     color: rgba(255, 255, 255, 0.12);
     font-weight: bold;
     text-shadow: 0 -1px 0 #000;
+}
+.table tbody td.tableActs,
+.table tbody td.td-child
+{
+    text-align:center;
+    padding:0!important;
+
 }
