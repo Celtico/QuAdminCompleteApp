@@ -28,7 +28,7 @@ Screen Shots
 
 QuAdmin
 
-![Example screenshot](http://qumodules.com/inc2.png)
+![Example screenshot](http://qumodules.com/inc4.png)
 
 QuDemoWeb
 ![QuDemo example screenshot](http://cenics.cat/quwebdemo.jpg)
