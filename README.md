@@ -80,5 +80,16 @@ The end of the installation
 - Create a virtual host in apache, that points to the folder /public
 - Once everything is set up enter http://your_domain/admin-demo, it will ask you to login.
 - The default user and password are Email:admin@admin.com Password:adminadmin
-- Inside http://your_domain/web-demo you can test how administration of the web page works
+- Inside http://your_domain/web-demo you can test how administration of the web page works.
+
+Config dir module.config in QuAdminDemo - QuElFinder - QuPlupload and permission dir 777
+========================
+- In Module
+'DirUploadAbsolute'  =>  dirname(dirname(dirname(__DIR__)))  . '/public/uploads/files/web-demo',
+- In Vendor
+'DirUploadAbsolute'  => dirname(dirname(dirname(dirname(__DIR__))))  . '/public/uploads/files/web-demo',
+
+
+
+- Installation time in my case, 3 minutes
 
