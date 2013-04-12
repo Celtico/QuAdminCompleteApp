@@ -91,5 +91,5 @@ Config dir module.config in QuAdminDemo - QuElFinder - QuPlupload and permission
 
 
 
-- Installation time in my case, 3 minutes
+- Installation time in my case, 10 minutes
 
