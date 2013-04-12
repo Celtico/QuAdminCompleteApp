@@ -38,125 +38,125 @@ li { list-style:none }
     padding:0;
 }
 header{
-    /*background:url(../img/patterns/Patterns11.jpg);*/
-    background:url(../img/diagmonds.png);
-    height:58px;
-    padding:0 0 0 0;
-    position:relative;
-    z-index:3;
+   background:url(../img/patterns/Patterns11.jpg);
+/* background:url(../img/diagmonds.png);*/
+height:58px;
+padding:0 0 0 0;
+position:relative;
+z-index:3;
 }
 header ul.navigation ul li.active  {
-    opacity:1;
-    background:url(../img/patterns/Patterns11.jpg);
+opacity:1;
+background:url(../img/patterns/Patterns11.jpg);
 }
 .crumb {
-    height: 28px;
-    background: url(../img/patterns/Patterns11.jpg);
-    border-top: 1px solid #c3c3c3;
-    border-bottom: 1px solid #FFF;
-    font-size: 11px;
-    color: #FFF;
+height: 28px;
+background: url(../img/patterns/Patterns11.jpg);
+border-top: 1px solid #c3c3c3;
+border-bottom: 1px solid #FFF;
+font-size: 11px;
+color: #FFF;
 }
 
 .logo {
-    padding: 17px 20px 0 24px;
-    font-size: 22px;
-    color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 -1px 0 rgb(0, 0, 0);
-    font-weight: bold;
-    float: left;
+padding: 17px 20px 0 24px;
+font-size: 22px;
+color: rgba(255, 255, 255, 0.5);
+text-shadow: 0 -1px 0 rgb(0, 0, 0);
+font-weight: bold;
+float: left;
 
 }
 .logo .iconb{
-    padding-right:5px;
+padding-right:5px;
 }
 .logo:hover {
-    color:#FFF;
+color:#FFF;
 }
 
 header ul.navigation {
-    margin:0;
-    float:right;
-    padding:10px 20px 0 20px;
-    font-size:12px;
-    letter-spacing:1px;
+margin:0;
+float:right;
+padding:10px 20px 0 20px;
+font-size:12px;
+letter-spacing:1px;
 }
 header ul.navigation li a {
-    color:#FFF;
-    padding:12px 25px 12px 18px;
-    display:block;
+color:#FFF;
+padding:12px 25px 12px 18px;
+display:block;
 
 
 }
 header ul.navigation ul li a {
-    padding:10px 40px 10px 30px;
-    display:block;
-    width:100%;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+padding:10px 40px 10px 30px;
+display:block;
+width:100%;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
 }
 header ul.navigation li  {
-    float:left;
-    list-style:none;
-    position:relative;
-    width:auto;
-    margin:0 1px  0 0;
+float:left;
+list-style:none;
+position:relative;
+width:auto;
+margin:0 1px  0 0;
 }
 header ul.navigation ul li  {
-    display:block;
-    width:100%;
+display:block;
+width:100%;
 }
 header ul.navigation li ul  {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius:0 0 4px 4px;
-    height:0;
-    right: 0;
-    position:absolute;
-    overflow:hidden;
-    background: rgba(0, 0, 0, 0.8);
-    padding:10px 0 10px 0;
-    opacity:0;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+border-radius:0 0 4px 4px;
+height:0;
+right: 0;
+position:absolute;
+overflow:hidden;
+background: rgba(0, 0, 0, 0.8);
+padding:10px 0 10px 0;
+opacity:0;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
 }
 header ul.navigation li:hover a {
-   color:#000;
+color:#000;
 }
 header ul.navigation li:hover  li a {
-    color:#999;
+color:#999;
 }
 header ul.navigation li:hover  {
-    background:url(../img/Texture0203.jpg);
-    border-radius:4px 4px 0 0;
+background:url(../img/Texture0203.jpg);
+border-radius:4px 4px 0 0;
 
 }
 
 
 header ul.navigation ul li:hover  {
-    background: rgba(0, 0, 0, 0.8);
-    border-radius:0;
+background: rgba(0, 0, 0, 0.8);
+border-radius:0;
 
 }
 header ul.navigation li.active  {
-    background:url(../img/Texture0203.jpg);
-    border-radius:4px 4px 0 0;
+background:url(../img/Texture0203.jpg);
+border-radius:4px 4px 0 0;
 }
 
 header ul.navigation li ul a:hover {
-    opacity:1;
-    color:#FFF;
-    background: rgba(0, 0, 0, 0.8);
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+opacity:1;
+color:#FFF;
+background: rgba(0, 0, 0, 0.8);
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
 }
 /*ACTIVE*/
 header ul.navigation li.active  a {
