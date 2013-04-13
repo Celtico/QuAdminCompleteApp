@@ -50,3 +50,34 @@ function initTable ()
         "bAutoWidth": false
     } );
 }
+
+
+
+var form = $('form');
+var icon = form.find('#icon').length;
+if(icon){
+
+    var input = form.find('#icon').parent().html();
+    var container =  form.find('#icon').parent();
+    $(container).html(input + '<div class="iconLoad-ajax"></div>');
+    var loadAjax = $('.iconLoad-ajax');
+
+    loadAjax.load('/icomoon/icon-ajax',function(){});
+
+
+    $(loadAjax).click(function () {
+
+        var open = $('.iconLoad-ajax-open');
+        var openLength = open.length;
+
+        if(!openLength){
+            loadAjax.addClass('iconLoad-ajax-open');
+        }else{
+            loadAjax.removeClass('iconLoad-ajax-open');
+        }
+
+    });
+
+}
+
+

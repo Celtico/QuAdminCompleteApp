@@ -1,0 +1,134 @@
+.glyph,
+.glyph2 {
+    float: left;
+    text-align: center;
+
+    width:70px;
+    border-radius: .375em;
+    color: #555;
+    text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.05), 1px 1px 0 #fff;
+
+}
+
+.glyph input ,
+.glyph2 input   {
+    width: 100%;
+    text-align: center;
+    height: 20px!important;
+
+}
+
+.glyph input[type=text] {
+    display:none!important;
+
+}
+
+#glyphs{
+    padding:7px;
+    background: rgba(0, 0, 0, 0.01);
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #ccc;
+}
+
+.fs1 {
+    margin-bottom:10px;
+    margin-top:10px;
+    font-size:27px;
+}
+.copy {
+
+   border-bottom:solid 1px #ccc;
+    float:none;
+    width:auto;
+    padding:30px 0 10px 0;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 0 20px;
+
+}
+.glyph:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+.glyph:active {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+.copy input[type=text] {
+    position: relative;
+    margin-top:10px!important;
+    background:none!important;
+    border:0!important;
+    padding:0!important;
+    box-shadow: 0 0 0 #fff!important;
+
+}
+#icon {
+    font-size:50px;
+    color: #333;
+
+}
+.box1 {
+    background: rgba(0, 0, 0, 0.01);
+    display:block;
+    width:200px;
+    float: left;
+    height:30px;
+    border-radius: .375em;
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #ccc;
+    padding:7px;
+    margin:6px;
+    line-height:30px;
+}
+.box1 i {
+    font-size:27px;
+    display:block;
+    float: left;
+    color: #333;
+    margin-right: 26px;
+    margin-left: 10px;
+    margin-top: 9px;
+
+
+}
+.prev-icon {
+     font-size:25px;
+     padding:7px;
+     text-align:center;
+     color:#333;
+     z-index:2;
+     box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #ccc;
+ }
+.container {
+    overflow-x:hidden;
+    height:161px!important;
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #ccc;
+    width:100%;
+}
+
+.container .fs1 {
+    padding-bottom:5px!important;
+    padding-top:5px!important;
+    margin:0;
+    font-size:15px;
+    border-bottom:1px #eee solid;
+}
+.container .glyph {
+    float: left;
+    text-align: center;
+    width:30px;
+    border-radius: .375em;
+    color: #555;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.05), 1px 1px 0 #fff;
+    cursor:pointer;
+}
+
+
+
+.iconLoad-ajax{
+    height:37px;
+    overflow:hidden;
+    padding:1px 1px 0 1px;
+}
+
+.iconLoad-ajax-open {
+    height:200px;
+}
