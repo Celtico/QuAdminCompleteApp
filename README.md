@@ -57,6 +57,7 @@ Modules Including
 - QuWebDemo
 - QuSystem
 - QuPlupload
+- QuIcoMoon
 
 Installation by Composer
 ========================
