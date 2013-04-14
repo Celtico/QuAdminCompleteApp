@@ -83,8 +83,9 @@ The end of the installation
 - The default user and password are Email:admin@admin.com Password:adminadmin
 - Inside http://your_domain/web-demo you can test how administration of the web page works.
 
-Config dir module.config in QuAdminDemo - QuElFinder - QuPlupload and permission dir 777
+Config dir module.config
 ========================
+- In QuAdminDemo (web.demo.config.php) - QuElFinder - QuPlupload (module.config) and permission dir upload 777
 - In Module
 'DirUploadAbsolute'  =>  dirname(dirname(dirname(__DIR__)))  . '/public/uploads/files/web-demo',
 - In Vendor
