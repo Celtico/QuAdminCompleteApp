@@ -18,6 +18,7 @@ return array(
         'QuCKEditor',
         'QuPHPMailer',
         'QuTcPdf',
+        'QuIcoMoon',
 
         //Qu developed
         'QuSystem',
