@@ -35,6 +35,11 @@ li { list-style:none }
     min-width:860px!important;
 }
 */
+.iconb-view {
+    font-size:30px;
+    color:#333;
+}
+
 .container-fluid {
     padding:0;
 }
