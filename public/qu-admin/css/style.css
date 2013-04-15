@@ -191,10 +191,15 @@ header ul.navigation li a .iconb {
     top:2px;
 
 }
-.top {
+.top-sidebar {
     width:170px;
     height:58px;
 }
+.tooltip-user {
+    position:relative;
+}
+
+
 /* USER */
 .user {
     border-top:1px solid rgba(255, 255, 255, 0.1);
