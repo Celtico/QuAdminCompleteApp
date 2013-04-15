@@ -36,6 +36,11 @@ div.container a.brand {
     padding: 10px 20px 10px 40px;
 }
 
+
+.image-head  img {
+   height:50px!important;
+}
+
 .lang { float:right; }
 .lang ul li a { font-size:11px; padding:2px 15px 2px 15px!important;  margin:8px 1px;  background:#444; -webkit-border-radius:5px;  }
 .lang ul li a:hover { background:#555!important;   }

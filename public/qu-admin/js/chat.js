@@ -52,25 +52,25 @@ socket.onmessage = function(evt){
  *
  * */
 
-    function Chat(){
+function Chat(){
 
-        var message = $('.textCaht').attr('value');
-        var id = 'id' + $('body').attr('id');
-        var idF = $('.chat-windows').attr('data-name');
-        var chat;
+    var message = $('.textCaht').attr('value');
+    var id = 'id' + $('body').attr('id');
+    var idF = $('.chat-windows').attr('data-name');
+    var chat;
 
-        if(message)
-        {
-            if(idF != ''){  id = idF; }
-            $('.textCaht').attr('value','');
-            $('.mCaht div').append('<strong>' + id + '</strong>: '  +   message  + '<br>');
-            play_sound('/qu-admin/audio/chat.mp3');
+    if(message)
+    {
+        if(idF != ''){  id = idF; }
+        $('.textCaht').attr('value','');
+        $('.mCaht div').append('<strong>' + id + '</strong>: '  +   message  + '<br>');
+        play_sound('/qu-admin/audio/chat.mp3');
 
-            chat =  'chat' +'|'+ id +'|'+   message;
-        }
-
-        return chat;
+        chat =  'chat' +'|'+ id +'|'+   message;
     }
+
+    return chat;
+}
 
 
 /*
@@ -79,58 +79,58 @@ socket.onmessage = function(evt){
  *
  * */
 
-    $(".chat-btn").bind('click',function(){
-        // console.log(Chat());
+$(".chat-btn").bind('click',function(){
+    // console.log(Chat());
+    socket.send(Chat());
+    return false;
+});
+
+$(".textCaht").keypress(function(e) {
+    if (e.which == 13) {
         socket.send(Chat());
-        return false;
-    });
+    }
+});
 
-    $(".textCaht").keypress(function(e) {
-        if (e.which == 13) {
-            socket.send(Chat());
-        }
-    });
+$(".close-chat").bind('click',function(){
+    $('.chat-pos').css('display','none');
+});
 
-    $(".close-chat").bind('click',function(){
-        $('.chat-pos').css('display','none');
-    });
+$("a.chat").bind('click',function(){
+    $('.chat-pos').css('display','block');
+});
 
-    $("a.chat").bind('click',function(){
-        $('.chat-pos').css('display','block');
-    });
-
-    $( "#resizable" ).resizable().draggable();
+$( "#resizable" ).resizable().draggable();
 
 
 
 /*
-*
-* LOAD AUDIO
-*
-* */
+ *
+ * LOAD AUDIO
+ *
+ * */
 
-    function html5_audio(){
-        var a = document.createElement('audio');
-        return !!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
+function html5_audio(){
+    var a = document.createElement('audio');
+    return !!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
+}
+
+var play_html5_audio = false;
+if(html5_audio()) play_html5_audio = true;
+
+
+function play_sound(url){
+    if(play_html5_audio){
+        var snd = new Audio(url);
+        snd.load();
+        snd.play();
+    }else{
+        $("#sound").remove();
+        var sound = $("<embed id='sound' type='audio/mpeg' />");
+        sound.attr('src', url);
+        sound.attr('loop', false);
+        sound.attr('hidden', true);
+        sound.attr('autostart', true);
+        $('body').append(sound);
     }
-
-    var play_html5_audio = false;
-    if(html5_audio()) play_html5_audio = true;
-
-
-    function play_sound(url){
-        if(play_html5_audio){
-            var snd = new Audio(url);
-            snd.load();
-            snd.play();
-        }else{
-            $("#sound").remove();
-            var sound = $("<embed id='sound' type='audio/mpeg' />");
-            sound.attr('src', url);
-            sound.attr('loop', false);
-            sound.attr('hidden', true);
-            sound.attr('autostart', true);
-            $('body').append(sound);
-        }
-    }
+}
 
