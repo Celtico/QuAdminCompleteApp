@@ -35,134 +35,140 @@ li { list-style:none }
     min-width:860px!important;
 }
 */
+
 .iconb-view {
     font-size:25px;
     color:#333;
+}
+
+.td-child .iconb  {
+    color: rgba(255, 255, 255, 0.3);
+    margin-right:5px;
 }
 
 .container-fluid {
     padding:0;
 }
 header{
-   background:url(../img/patterns/Patterns11.jpg);
-/* background:url(../img/diagmonds.png);*/
-height:58px;
-padding:0 0 0 0;
-position:relative;
-z-index:3;
+    background:url(../img/patterns/Patterns11.jpg);
+    /* background:url(../img/diagmonds.png);*/
+    height:58px;
+    padding:0 0 0 0;
+    position:relative;
+    z-index:3;
 }
 header ul.navigation ul li.active  {
-opacity:1;
-background:url(../img/patterns/Patterns11.jpg);
+    opacity:1;
+    background:url(../img/patterns/Patterns11.jpg);
 }
 .crumb {
-height: 28px;
-background: url(../img/patterns/Patterns11.jpg);
-border-top: 1px solid #c3c3c3;
-border-bottom: 1px solid #FFF;
-font-size: 11px;
-color: #FFF;
+    height: 28px;
+    background: url(../img/patterns/Patterns11.jpg);
+    border-top: 1px solid #c3c3c3;
+    border-bottom: 1px solid #FFF;
+    font-size: 11px;
+    color: #FFF;
 }
 
 .logo {
-padding: 17px 20px 0 24px;
-font-size: 22px;
-color: rgba(255, 255, 255, 0.5);
-text-shadow: 0 -1px 0 rgb(0, 0, 0);
-font-weight: bold;
-float: left;
+    padding: 17px 20px 0 24px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 -1px 0 rgb(0, 0, 0);
+    font-weight: bold;
+    float: left;
 
 }
 .logo .iconb{
-padding-right:5px;
+    padding-right:5px;
 }
 .logo:hover {
-color:#FFF;
+    color:#FFF;
 }
 
 header ul.navigation {
-margin:0;
-float:right;
-padding:10px 20px 0 20px;
-font-size:12px;
-letter-spacing:1px;
+    margin:0;
+    float:right;
+    padding:10px 20px 0 20px;
+    font-size:12px;
+    letter-spacing:1px;
 }
 header ul.navigation li a {
-color:#FFF;
-padding:12px 25px 12px 18px;
-display:block;
+    color:#FFF;
+    padding:12px 25px 12px 18px;
+    display:block;
 
 
 }
 header ul.navigation ul li a {
-padding:10px 40px 10px 30px;
-display:block;
-width:100%;
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--ms-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
+    padding:10px 40px 10px 30px;
+    display:block;
+    width:100%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 header ul.navigation li  {
-float:left;
-list-style:none;
-position:relative;
-width:auto;
-margin:0 1px  0 0;
+    float:left;
+    list-style:none;
+    position:relative;
+    width:auto;
+    margin:0 1px  0 0;
 }
 header ul.navigation ul li  {
-display:block;
-width:100%;
+    display:block;
+    width:100%;
 }
 header ul.navigation li ul  {
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-border-radius:0 0 4px 4px;
-height:0;
-right: 0;
-position:absolute;
-overflow:hidden;
-background: rgba(0, 0, 0, 0.8);
-padding:10px 0 10px 0;
-opacity:0;
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--ms-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius:0 0 4px 4px;
+    height:0;
+    right: 0;
+    position:absolute;
+    overflow:hidden;
+    background: rgba(0, 0, 0, 0.8);
+    padding:10px 0 10px 0;
+    opacity:0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 header ul.navigation li:hover a {
-color:#000;
+    color:#000;
 }
 header ul.navigation li:hover  li a {
-color:#999;
+    color:#999;
 }
 header ul.navigation li:hover  {
-background:url(../img/Texture0203.jpg);
-border-radius:4px 4px 0 0;
+    background:url(../img/Texture0203.jpg);
+    border-radius:4px 4px 0 0;
 
 }
 
 
 header ul.navigation ul li:hover  {
-background: rgba(0, 0, 0, 0.8);
-border-radius:0;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius:0;
 
 }
 header ul.navigation li.active  {
-background:url(../img/Texture0203.jpg);
-border-radius:4px 4px 0 0;
+    background:url(../img/Texture0203.jpg);
+    border-radius:4px 4px 0 0;
 }
 
 header ul.navigation li ul a:hover {
-opacity:1;
-color:#FFF;
-background: rgba(0, 0, 0, 0.8);
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--ms-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
+    opacity:1;
+    color:#FFF;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 /*ACTIVE*/
 header ul.navigation li.active  a {
@@ -232,7 +238,7 @@ header ul.navigation li a .iconb {
     line-height:14px;
 }
 .user ul li a  {
-    width:72px;
+    width:44px;
     text-align:center;
 
     display:block;
@@ -256,8 +262,8 @@ header ul.navigation li a .iconb {
 
 }
 .user ul li a .iconb{
-    color:#fff;
-    margin-right:5px;
+
+    font-size:14px;
 }
 .user ul li a:hover {
     box-shadow:inset 0 0 40px #000;
@@ -469,7 +475,7 @@ ul.breadcrumbs li.active a {
 #content {
 
     background:#FFF;
-   background:url(../img/satinweave.png);
+    background:url(../img/satinweave.png);
     /*background: url(../img/Texture0203.jpg);*/
     padding-bottom:50px;
     position: relative;
@@ -606,7 +612,7 @@ ul.breadcrumbs li.active a {
 
 .formBlock .row-fluid {
 
-   /* background: #f7f7f7;*/
+    /* background: #f7f7f7;*/
 }
 input[type=text] {
     box-shadow: 0 0 2px #fff!important;
@@ -699,37 +705,37 @@ table {
 }
 */
 .btn {
-/*
-    border: 1px solid #d3d3d3;
-    cursor: pointer;
-    color: rgba(96, 96, 96, 0.87);
-    font-size: 12px;
+    /*
+        border: 1px solid #d3d3d3;
+        cursor: pointer;
+        color: rgba(96, 96, 96, 0.87);
+        font-size: 12px;
 
-    line-height: 14px;
+        line-height: 14px;
 
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
+        border-radius:4px;
+        -webkit-border-radius:4px;
+        -moz-border-radius:4px;
 
 
-    border: 1px solid #d8d8d8;
-    color: #808080;
-    text-shadow: 0 1px #f5f5f5;
-    background: #fcfcfc;
-    background: -moz-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f1f1f1));
-    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
-    background: -o-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
-    background: -ms-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
-    background: linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f1f1f1',GradientType=0 );
-    border: 1px solid #d2d2d2;
+        border: 1px solid #d8d8d8;
+        color: #808080;
+        text-shadow: 0 1px #f5f5f5;
+        background: #fcfcfc;
+        background: -moz-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f1f1f1));
+        background: -webkit-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
+        background: -o-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
+        background: -ms-linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
+        background: linear-gradient(top, #fcfcfc 0%,#f1f1f1 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f1f1f1',GradientType=0 );
+        border: 1px solid #d2d2d2;
 
-    box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
-    -webkit-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
-    -moz-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
+        box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
+        -webkit-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
+        -moz-box-shadow: 0 1px 0 #fff inset, 0 1px 0px #eeeeee;
 
-*/
+    */
 }
 
 .botons .btn {
@@ -1509,7 +1515,7 @@ td .checker,
 #checkAll_filter,
 #checkAll_info,
 #checkAll_paginate{
-display:none;
+    display:none;
 }
 
 
@@ -1526,7 +1532,7 @@ display:none;
     top:0;
 }
 .nav-actions-height {
-   height:70px;
+    height:70px;
 }
 
 .nav-actions .title-nav {
@@ -1570,7 +1576,7 @@ display:none;
     float:right;
     margin-right:40px;
 }.nav-actions .languages li {
-    float:left;
+     float:left;
  }
 
 .btn {
@@ -1598,9 +1604,9 @@ td .btn  {
 }
 
 .error li {
-     font-size:11px;
-     color:rgb(204, 0, 20) !important
- }
+    font-size:11px;
+    color:rgb(204, 0, 20) !important
+}
 
 .close {
     background: rgb(48, 48, 48)!important;
@@ -1716,9 +1722,96 @@ tfoot td{
     background: rgba(255, 255, 255, 0.4);
 }
 
+/* CHAT */
+
+.chat-windows .close-chat  {
+
+    background: rgb(48, 48, 48)!important;
+    padding: 0 5px 4px 5px!important;
+    border: solid 2px #fff!important;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5)!important;
+    border-radius: 100px!important;
+    color: #fff;
+    opacity: 1!important;
+    position:absolute;
+    right:-7px!important;
+    top: -7px!important;
+    font-size: 15px!important;
+    font-weight: normal!important;
+    line-height: 15px!important;
+}
+.chat-windows h5 {
+    padding:10px 0 0 0!important;
+    color: rgba(255, 255, 255, 0.12);
+    text-shadow: 0 -1px 0 #000;
+}
+
+a.chat {
+    cursor:pointer;
+}
+.chat-pos {
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    display:none;
+}
+.chat-windows {
+    box-shadow:0 2px 10px 0 rgba(0,0,0,0.4);
+    border-color: #252525;
+    border-radius: 5px;
+    color:#FFF;
+    font-size: 12px;
+    padding:0 15px 0 15px;
+    background: url(../img/ios-linen.jpg);
+    position:relative;
+    z-index:100;
+    width:300px;
+
+}
+
+.label-textCaht input {
+    width:87%;
+    background: rgba(255, 255, 255, 0.2);
+    color:#CCC;
+    border-color:#000;
+    margin-top:1px!important;
+}
+
+.label-textCaht {
+    margin-top:12px;
+    height:37px;
+    display:block;
+}
 
 
+.chat-btn {
 
+    margin-left:2%;
+    display:block;
+    float:left;
+    border-radius:5px!important;
+    padding:1px 0 1px 0;
+    width:10%;
+}
+
+.mCaht {
+    background: url(../img/satinweave.png);
+    overflow: hidden;
+    position: relative;
+    padding:5px 5px 0 5px;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.4);
+    border-radius: 3px;
+    font-size:13px;
+    color:rgba(0,0,0,0.5);
+    height:200px;
+}
+.mCaht div{
+    position:absolute;
+    bottom:0;
+}
+.userC {
+    color:rgba(0,0,0,0.9);
+}
 @media (max-width: 767px) {
 
     header .navigation {
@@ -1763,5 +1856,4 @@ tfoot td{
 
 
 }
-
 
