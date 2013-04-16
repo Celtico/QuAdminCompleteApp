@@ -4,8 +4,6 @@
  * WebSocket
  *
  * */
-
-
 $.ajax({url:"http://qumodules.com/server.php"});
 
 
@@ -32,17 +30,45 @@ socket.onmessage = function(evt){
 
     if(message[0] == 'chat')
     {
-        $('.mCaht div').append('<span class="userC"><strong>' + message[1] + '</strong>: '  +  message[2] + '</span><br>');
+        var mChat = $(".mChat");
+
+        mChat.append('<span class="userC"><strong>' + message[1] + '</strong>: '  +  message[2] + '</span><br>');
         play_sound('/qu-admin/audio/chat.mp3');
         $('.chat-pos').css('display','block');
+        mChat.scrollTop(mChat[0].scrollHeight);
         return;
     }
     if(message[0] == 'clients') {
 
-        $('body').attr('id', sMsg.id);
         $('.numConnect').html(message[1]);
+        $('.chat-pos').attr('id',sMsg.id);
 
+        var user = sMsg.users.split(",");
+
+        socket.send('users' + '|' + user);
+
+        var en2 = '';
+        for(var i2 in user)
+        {
+
+            en2 += '<span class="userC">' + user[i2] + '</span><br>';
+        }
+
+        $('.list-chat').html(en2);
     }
+    if(message[0] == 'users') {
+
+        var f = message[1].split(",");
+        var en = '';
+        for(var i in f)
+        {
+            en += '<span class="userC">' + f[i] + '</span><br>';
+        }
+        $('.list-chat').html(en);
+    }
+
+
+
 };
 
 
@@ -54,19 +80,25 @@ socket.onmessage = function(evt){
 
 function Chat(){
 
-    var message = $('.textCaht').attr('value');
-    var id = 'id' + $('body').attr('id');
-    var idF = $('.chat-windows').attr('data-name');
+
+    var texChat = $('.textChat');
+    var message = texChat.attr('value');
+    var id  = 'id' + $('body').attr('id');
+    var idF = $('.chat-pos').attr('data-name');
     var chat;
 
     if(message)
     {
+        texChat.scrollTop =  texChat.scrollHeight;
         if(idF != ''){  id = idF; }
-        $('.textCaht').attr('value','');
-        $('.mCaht div').append('<strong>' + id + '</strong>: '  +   message  + '<br>');
+        texChat.attr('value','');
+        $('.mChat').append('<strong>' + id + '</strong>: '  +   message  + '<br>');
         play_sound('/qu-admin/audio/chat.mp3');
 
         chat =  'chat' +'|'+ id +'|'+   message;
+
+        var mChat = $(".mChat");
+        mChat.scrollTop(mChat[0].scrollHeight);
     }
 
     return chat;
@@ -80,12 +112,11 @@ function Chat(){
  * */
 
 $(".chat-btn").bind('click',function(){
-    // console.log(Chat());
     socket.send(Chat());
     return false;
 });
 
-$(".textCaht").keypress(function(e) {
+$(".textChat").keypress(function(e) {
     if (e.which == 13) {
         socket.send(Chat());
     }
@@ -97,11 +128,16 @@ $(".close-chat").bind('click',function(){
 
 $("a.chat").bind('click',function(){
     $('.chat-pos').css('display','block');
+    var texChat = $('.textChat');
+    texChat.scrollTop =  texChat.scrollHeight;
 });
 
-$( "#resizable" ).resizable().draggable();
 
 
+var chatPos = $('.chat-pos');
+chatPos.resizable();
+chatPos.draggable({ handle: "h5" });
+$(".mChat").scrollTop($(".mChat")[0].scrollHeight);
 
 /*
  *

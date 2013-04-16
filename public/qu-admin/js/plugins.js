@@ -83,3 +83,8 @@ function initTable ()
     }
 
 
+//fieldset-collapse
+$('.fieldset-collapse').find(".row-fluid").slideToggle();
+$("fieldset legend").click(function () {
+    $(this).parent().find(".row-fluid").slideToggle();
+});
