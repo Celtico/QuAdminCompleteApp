@@ -1,7 +1,27 @@
-
 --
 -- Base de dades: `qumodules-app-demo`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de la taula `qu-other-demo`
+--
+
+CREATE TABLE IF NOT EXISTS `qu-other-demo` (
+`id_other_demo` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+`id_author` bigint(20) unsigned NOT NULL DEFAULT '0',
+`name` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+`title` text COLLATE utf8_unicode_ci NOT NULL,
+`languages` text COLLATE utf8_unicode_ci NOT NULL,
+`id_parameters` text COLLATE utf8_unicode_ci NOT NULL,
+`order` int(11) NOT NULL DEFAULT '0',
+`status` varchar(20) COLLATE utf8_unicode_ci DEFAULT 'publish',
+PRIMARY KEY (`id_other_demo`),
+KEY `name` (`name`),
+KEY `name_status_date` (`name`,`status`,`id_other_demo`),
+KEY `author` (`id_author`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=0 ;
 
 -- --------------------------------------------------------
 
