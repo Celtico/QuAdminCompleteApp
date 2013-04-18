@@ -4,72 +4,76 @@
  * WebSocket
  *
  * */
-$.ajax({url:"http://qumodules.com/server.php"});
+$.ajax({url:"/wiserver.php"});
 
 
-var url = 'ws://46.16.58.120:9000';
-//var url = 'ws://127.0.0.1:9000';
+//var url = 'ws://46.16.58.120:9000';
+var url = 'ws://127.0.0.1:9000';
+
 
 socket = new WebSocket(url);
 
-socket.onopen = function(evt) {
+socket.onopen = function(evt)
+{
     $('.chat .iconb').css('color','#6ecc00');
-    console.log("WebSocket connected");
+    log("WebSocket connected " + evt);
 };
-socket.onclose = function(evt) {
-    console.log("DISCONNECTED " + evt.data);
+socket.onclose = function(evt)
+{
+    $('.chat .iconb').css('color','');
+    log("WebSocket disConnected " + evt);
 };
 socket.onerror = function(evt) {
-    console.log('ERROR ' + evt.data);
+    log('WebSocket  error ' + evt);
 };
 socket.onmessage = function(evt){
 
-    eval('var sMsg='+evt.data);
 
-    var message = sMsg.msg.split("|");
+    eval('var server='+evt.data);
 
-    if(message[0] == 'chat')
-    {
-        var mChat = $(".mChat");
+    var id_user,name,id_resource,listUsers;
+    var dataPost   = $('.chat-pos');
+    var lisChat    = $('.list-chat');
+    var mChat      = $('.mChat');
+    var numConnect = $('.numConnect');
 
-        mChat.append('<span class="userC"><strong>' + message[1] + '</strong>: '  +  message[2] + '</span><br>');
-        play_sound('/qu-admin/audio/chat.mp3');
-        $('.chat-pos').css('display','block');
+    log(server.type);
+
+    if(server.type == 'onMessage'){
+
+        log(server.message);
+
+        mChat.append('<span class="userC">' +  server.date + ' <strong>' + server.name + '</strong>: '  +  server.message + '</span><br>');
+        dataPost.css('display','block');
         mChat.scrollTop(mChat[0].scrollHeight);
-        return;
+
+        play_sound('/qu-admin/audio/chat.mp3');
+
+    }else if( server.type == 'listUsers' ) {
+
+        lisChat.load("/chat/list", function(){
+            numConnect.html(server.usersCount);
+        });
+
+    }else if( server.type == 'onOpen' ) {
+
+        log(server.usersCount);
+
+        dataPost.attr('data-resource',server.id_resource);
+        id_user = dataPost.attr('id');
+        name    = dataPost.attr('data-name');
+
+        socket.send( 'onOpen' +'|'+ name +'|'+ id_user  +'|'+ server.id_resource + '|' + server.id_chat + '|||' + 'onOpen');
+
+        mChat.load("/chat/messages/" + id_user);
     }
-    if(message[0] == 'clients') {
-
-        $('.numConnect').html(message[1]);
-        $('.chat-pos').attr('id',sMsg.id);
-
-        var user = sMsg.users.split(",");
-
-        socket.send('users' + '|' + user);
-
-        var en2 = '';
-        for(var i2 in user)
-        {
-
-            en2 += '<span class="userC">' + user[i2] + '</span><br>';
-        }
-
-        $('.list-chat').html(en2);
-    }
-    if(message[0] == 'users') {
-
-        var f = message[1].split(",");
-        var en = '';
-        for(var i in f)
-        {
-            en += '<span class="userC">' + f[i] + '</span><br>';
-        }
-        $('.list-chat').html(en);
-    }
-
-
 
 };
+
+function log(data){
+ console.log(data);
+}
+
 
 
 /*
@@ -80,28 +84,39 @@ socket.onmessage = function(evt){
 
 function Chat(){
 
+    var today = new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    var time =h+":"+m+":"+s;
 
-    var texChat = $('.textChat');
-    var message = texChat.attr('value');
-    var id  = 'id' + $('body').attr('id');
-    var idF = $('.chat-pos').attr('data-name');
-    var chat;
+    var texChat     = $('.textChat');
+    var dataPost    = $('.chat-pos');
+    var chatList    = $('.chat-list');
 
-    if(message)
-    {
+    var message      = texChat.attr('value');
+    var id_user      = dataPost.attr('id');
+    var name         = dataPost.attr('data-name');
+    var id_resource  = dataPost.attr('data-resource');
+
+    var id_parent           = chatList.attr('id');
+    var name_parent         = chatList.attr('data-name');
+    var id_resource_parent  = chatList.attr('data-resource');
+
+
+    if(message){
+
         texChat.scrollTop =  texChat.scrollHeight;
-        if(idF != ''){  id = idF; }
         texChat.attr('value','');
-        $('.mChat').append('<strong>' + id + '</strong>: '  +   message  + '<br>');
+        $('.mChat').append(time + ' ' + '<strong>' + name + '</strong>:   '  +  message  + '  <br>');
         play_sound('/qu-admin/audio/chat.mp3');
 
-        chat =  'chat' +'|'+ id +'|'+   message;
+        socket.send('onMessage' + '|'+ name +'|'+ id_user +'|'+ id_resource + '|' + id_parent + '|' + name_parent + '|' + id_resource_parent +'|'+ message);
 
         var mChat = $(".mChat");
         mChat.scrollTop(mChat[0].scrollHeight);
     }
 
-    return chat;
 }
 
 
@@ -110,15 +125,17 @@ function Chat(){
  * Click actions
  *
  * */
+var mChat = $(".mChat");
+var chatPos = $('.chat-pos');
 
 $(".chat-btn").bind('click',function(){
-    socket.send(Chat());
+    Chat();
     return false;
 });
 
 $(".textChat").keypress(function(e) {
     if (e.which == 13) {
-        socket.send(Chat());
+        Chat();
     }
 });
 
@@ -129,15 +146,12 @@ $(".close-chat").bind('click',function(){
 $("a.chat").bind('click',function(){
     $('.chat-pos').css('display','block');
     var texChat = $('.textChat');
-    texChat.scrollTop =  texChat.scrollHeight;
+    mChat.scrollTop(mChat[0].scrollHeight);
 });
 
 
-
-var chatPos = $('.chat-pos');
 chatPos.resizable();
 chatPos.draggable({ handle: "h5" });
-$(".mChat").scrollTop($(".mChat")[0].scrollHeight);
 
 /*
  *
