@@ -21,6 +21,7 @@ return array(
         'QuIcoMoon',
 
         //Qu developed
+        'QuChat',
         'QuSystem',
         'QuWebDemo',
         'QuAdminDemo',
