@@ -14,9 +14,10 @@
         "qu-modules/qu-admin":"dev-master",
         "qu-modules/qu-webdemo":"dev-master",
         "qu-modules/qu-admindemo":"dev-master",
-	    "qu-modules/qu-system":"dev-master",
-	    "qu-modules/qu-plupload":"dev-master",
+        "qu-modules/qu-system":"dev-master",
+        "qu-modules/qu-plupload":"dev-master",
         "qu-modules/qu-ico-moon":"dev-master",
-        "qu-modules/qu-chat":"dev-master"
+        "cboden/Ratchet" :  "dev-master",
+        "qu-modules/qu-chat": "dev-master"
     }
 }
