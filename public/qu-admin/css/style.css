@@ -1737,6 +1737,7 @@ div.chat-pos {
     margin:30px;
     border:0!important;
     display:none;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 div.ui-widget-header  {
     border:0!important;
@@ -1849,8 +1850,19 @@ div.ui-widget-header  {
 .ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
 .ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
 .ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
-.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}/*!
-/*multi-checkbox divider-4*/
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+.ui-icon-gripsmall-diagonal-se {
+    width: 0;
+    height: 0;
+    border-width: 10px 10px 0 0;
+    border-color: transparent rgba(255, 255, 255, 0.17) transparent transparent;
+    border-style: dashed solid dashed dashed;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.29);
+
+}
+/*!/*multi-checkbox divider-4*/
 
 .multi-checkbox-3 .checker {
     float:left;
