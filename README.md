@@ -48,6 +48,7 @@ Modules Including
 - WebinoImageThumb
 - CdliUserProfile
 - CgmConfigAdmin
+- Ratchet
 - QuElFinder
 - QuCKEditor
 - QuPHPMailer
@@ -58,6 +59,8 @@ Modules Including
 - QuSystem
 - QuPlupload
 - QuIcoMoon
+- QuChat
+
 
 Installation by Composer
 ========================
