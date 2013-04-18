@@ -1,4 +1,3 @@
-
 /*
  *
  * WebSocket
@@ -7,7 +6,6 @@
 $.ajax({url:"/wiserver.php"});
 
 
-//var url = 'ws://46.16.58.120:9000';
 var url = 'ws://127.0.0.1:9000';
 
 
@@ -31,11 +29,12 @@ socket.onmessage = function(evt){
 
     eval('var server='+evt.data);
 
-    var id_user,name,id_resource,listUsers;
     var dataPost   = $('.chat-pos');
     var lisChat    = $('.list-chat');
     var mChat      = $('.mChat');
     var numConnect = $('.numConnect');
+    var id_user    = dataPost.attr('id');
+    var name       = dataPost.attr('data-name');
 
     log(server.type);
 
@@ -44,16 +43,19 @@ socket.onmessage = function(evt){
         log(server.message);
 
         mChat.append('<span class="userC">' +  server.date + ' <strong>' + server.name + '</strong>: '  +  server.message + '</span><br>');
+
         dataPost.css('display','block');
+
         mChat.scrollTop(mChat[0].scrollHeight);
 
         play_sound('/qu-admin/audio/chat.mp3');
 
     }else if( server.type == 'listUsers' ) {
 
-        lisChat.load("/chat/list", function(){
-            numConnect.html(server.usersCount);
-        });
+        if(id_user){
+            lisChat.load("/chat/list");
+        }
+        numConnect.html(server.usersCount);
 
     }else if( server.type == 'onOpen' ) {
 
@@ -61,17 +63,20 @@ socket.onmessage = function(evt){
 
         dataPost.attr('data-resource',server.id_resource);
         id_user = dataPost.attr('id');
-        name    = dataPost.attr('data-name');
+
 
         socket.send( 'onOpen' +'|'+ name +'|'+ id_user  +'|'+ server.id_resource + '|' + server.id_chat + '|||' + 'onOpen');
 
-        mChat.load("/chat/messages/" + id_user);
+        if(id_user){
+            mChat.load("/chat/messages/" + id_user);
+        }
+
     }
 
 };
 
 function log(data){
- console.log(data);
+    //console.log(data);
 }
 
 
@@ -108,12 +113,15 @@ function Chat(){
 
         texChat.scrollTop =  texChat.scrollHeight;
         texChat.attr('value','');
+
         $('.mChat').append(time + ' ' + '<strong>' + name + '</strong>:   '  +  message  + '  <br>');
+
         play_sound('/qu-admin/audio/chat.mp3');
 
         socket.send('onMessage' + '|'+ name +'|'+ id_user +'|'+ id_resource + '|' + id_parent + '|' + name_parent + '|' + id_resource_parent +'|'+ message);
 
         var mChat = $(".mChat");
+
         mChat.scrollTop(mChat[0].scrollHeight);
     }
 
@@ -149,9 +157,9 @@ $("a.chat").bind('click',function(){
     mChat.scrollTop(mChat[0].scrollHeight);
 });
 
-
 chatPos.resizable();
 chatPos.draggable({ handle: "h5" });
+
 
 /*
  *
