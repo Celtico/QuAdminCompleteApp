@@ -285,6 +285,7 @@ INSERT INTO `qu-languages` (`id`, `id_author`, `name`, `title`, `order`, `status
 
 CREATE TABLE IF NOT EXISTS `qu-parameters` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_parent` int(11) NOT NULL,
   `id_author` bigint(20) unsigned NOT NULL DEFAULT '0',
   `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `title` text COLLATE utf8_unicode_ci NOT NULL,
@@ -294,25 +295,29 @@ CREATE TABLE IF NOT EXISTS `qu-parameters` (
   KEY `name` (`name`),
   KEY `name_status_date` (`name`,`status`,`id`),
   KEY `author` (`id_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=21 ;
 
 --
 -- Bolcant dades de la taula `qu-parameters`
 --
 
-INSERT INTO `qu-parameters` (`id`, `id_author`, `name`, `title`, `order`, `status`) VALUES
-(6, 1, 'loop-carousel', 'loop-carousel', -9, 'Public'),
-(7, 1, 'grid', 'grid', -8, 'Public'),
-(8, 1, 'loop-tabs', 'loop-tabs', -5, 'Public'),
-(9, 1, 'loop-collapse', 'loop-collapse', 0, 'Public'),
-(10, 1, 'loop-page', 'loop-page', -4, 'Public'),
-(11, 1, '-', '-', 2, 'Public'),
-(12, 1, 'main-menu', 'main-menu', -6, 'Public'),
-(13, 1, 'social-media', 'social-media', -7, 'Public'),
-(14, 1, 'footer', 'footer', 1, 'Public'),
-(15, 1, 'loop-grid-4', 'loop-grid-4', -3, 'Public'),
-(16, 1, 'loop-grid-3', 'loop-grid-3', -2, 'Public'),
-(17, 1, 'loop-grid-2', 'loop-grid-2', -1, 'Public');
+INSERT INTO `qu-parameters` (`id`, `id_parent`, `id_author`, `name`, `title`, `order`, `status`) VALUES
+(6, 18, 4, 'loop-carousel', 'loop-carousel', -9, 'Public'),
+(7, 18, 4, 'grid', 'grid', -8, 'Public'),
+(8, 18, 4, 'loop-tabs', 'loop-tabs', -5, 'Public'),
+(9, 18, 4, 'loop-collapse', 'loop-collapse', 0, 'Public'),
+(10, 18, 4, 'loop-page', 'loop-page', -4, 'Public'),
+(11, 18, 4, '-', '-', 2, 'Public'),
+(12, 18, 4, 'main-menu', 'main-menu', -6, 'Public'),
+(13, 18, 4, 'social-media', 'social-media', -7, 'Public'),
+(14, 18, 4, 'footer', 'footer', 1, 'Public'),
+(15, 18, 4, 'loop-grid-4', 'loop-grid-4', -3, 'Public'),
+(16, 18, 4, 'loop-grid-3', 'loop-grid-3', -2, 'Public'),
+(17, 18, 4, 'loop-grid-2', 'loop-grid-2', -1, 'Public'),
+(18, 0, 4, 'quwebdemo', 'QuWebDemo', 3, 'Public'),
+(19, 20, 4, 'brand', 'Brand', 4, 'Public'),
+(20, 0, 4, 'quwebmecamaq', 'QuWebMecamaq', 5, 'Public');
+
 
 -- --------------------------------------------------------
 
