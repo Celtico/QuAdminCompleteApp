@@ -1,3 +1,194 @@
+
+--
+-- Estructura de la taula `qu-categories`
+--
+
+CREATE TABLE IF NOT EXISTS `qu-categories` (
+  `id_categories` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `id_author` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `id_lang` bigint(20) NOT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `order` int(11) NOT NULL DEFAULT '0',
+  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `status` varchar(20) COLLATE utf8_unicode_ci DEFAULT 'publish',
+  `lang` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `parameters` text COLLATE utf8_unicode_ci,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `summary` text COLLATE utf8_unicode_ci,
+  `content` longtext COLLATE utf8_unicode_ci,
+  `icon` text COLLATE utf8_unicode_ci,
+  `meta_title` text COLLATE utf8_unicode_ci,
+  `meta_description` text COLLATE utf8_unicode_ci,
+  `meta_keywords` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id_categories`),
+  KEY `name` (`name`),
+  KEY `type_status_date` (`status`,`date`,`id_categories`),
+  KEY `id_parent` (`id_parent`),
+  KEY `author` (`id_author`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=311 ;
+
+--
+-- Bolcant dades de la taula `qu-categories`
+--
+
+INSERT INTO `qu-categories` (`id_categories`, `id_parent`, `id_author`, `id_lang`, `name`, `order`, `date`, `modified`, `status`, `lang`, `parameters`, `title`, `summary`, `content`, `icon`, `meta_title`, `meta_description`, `meta_keywords`) VALUES
+(268, 0, 4, 268, 'test-1', 5, '2013-04-21 19:37:17', '2013-04-22 00:08:28', 'Public', 'es', 'quwebmecamaq', 'TEST 1 (d)', NULL, NULL, '<span class="iconb" data-icon="&#xe015;"></span>', '', '', ''),
+(269, 268, 4, 269, 'test-2', 1, '2013-04-21 19:37:22', '2013-04-21 22:01:28', 'Public', 'es', 'quwebmecamaq', 'TEST 2 (d)', NULL, NULL, '', '', '', ''),
+(270, 269, 4, 270, 'test-3', 1, '2013-04-21 19:37:30', '2013-04-21 22:01:57', 'Public', 'es', 'quwebmecamaq', 'TEST 3 (d)', NULL, NULL, '', '', '', ''),
+(271, 270, 4, 271, 'test-4', 1, '2013-04-21 19:37:37', '2013-04-21 22:02:42', 'Public', 'es', 'quwebmecamaq', 'TEST 4 (d)', NULL, NULL, '', '', '', ''),
+(272, 271, 4, 272, 'test-10', 1, '2013-04-21 20:39:08', '2013-04-21 22:02:35', 'Public', 'es', 'quwebmecamaq', 'TEST 10 (d)', NULL, NULL, '', '', '', ''),
+(273, 272, 4, 273, 'test-11', 1, '2013-04-21 20:39:19', '2013-04-21 22:02:28', 'Public', 'es', 'quwebmecamaq', 'TEST 11 (d)', NULL, NULL, '', '', '', ''),
+(274, 273, 4, 274, 'test-12', 1, '2013-04-21 20:39:37', '2013-04-21 22:02:20', 'Public', 'es', 'quwebmecamaq', 'TEST 12 (d)', NULL, NULL, '', '', '', ''),
+(275, 273, 4, 275, 'test-12', 2, '2013-04-21 20:39:37', '2013-04-21 22:02:14', 'Public', 'es', 'quwebmecamaq', 'TEST 12 (d)', NULL, NULL, '', '', '', ''),
+(276, 0, 4, 243, 'test-1', 0, '0000-00-00 00:00:00', '2013-04-21 23:52:48', 'Public', 'en', 'quwebmecamaq', 'TEST 1 (d) EN', NULL, NULL, '', '', '', ''),
+(277, 268, 4, 269, 'test-2', 0, '0000-00-00 00:00:00', '2013-04-21 23:59:17', 'Public', 'en', 'quwebmecamaq', 'TEST 2 (d)', NULL, NULL, '', '', '', ''),
+(278, 268, 4, 269, 'test-2', 0, '0000-00-00 00:00:00', '2013-04-21 23:59:36', 'Public', 'fr', 'quwebmecamaq', 'TEST 2 (d)', NULL, NULL, '', '', '', ''),
+(279, 0, 0, 279, '', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'publish', NULL, NULL, ' (d)', NULL, NULL, NULL, NULL, NULL, NULL),
+(280, 0, 0, 280, '', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'publish', NULL, NULL, ' (d)', NULL, NULL, NULL, NULL, NULL, NULL),
+(281, 0, 4, 281, 'test-1', 6, '2013-04-21 19:37:17', '2013-04-22 00:08:28', 'Public', 'es', 'quwebmecamaq', 'TEST 1 (d) (d)', NULL, NULL, '<span class="iconb" data-icon="&#xe015;"></span>', '', '', ''),
+(282, 281, 4, 282, 'test-2', 1, '2013-04-21 19:37:22', '2013-04-21 22:01:28', 'Public', 'es', 'quwebmecamaq', 'TEST 2 (d) (d)', NULL, NULL, '', '', '', ''),
+(283, 282, 4, 283, 'test-3', 1, '2013-04-21 19:37:30', '2013-04-21 22:01:57', 'Public', 'es', 'quwebmecamaq', 'TEST 3 (d) (d)', NULL, NULL, '', '', '', ''),
+(284, 283, 4, 284, 'test-4', 1, '2013-04-21 19:37:37', '2013-04-21 22:02:42', 'Public', 'es', 'quwebmecamaq', 'TEST 4 (d) (d)', NULL, NULL, '', '', '', ''),
+(285, 284, 4, 285, 'test-10', 1, '2013-04-21 20:39:08', '2013-04-21 22:02:35', 'Public', 'es', 'quwebmecamaq', 'TEST 10 (d) (d)', NULL, NULL, '', '', '', ''),
+(286, 285, 4, 286, 'test-11', 1, '2013-04-21 20:39:19', '2013-04-21 22:02:28', 'Public', 'es', 'quwebmecamaq', 'TEST 11 (d) (d)', NULL, NULL, '', '', '', ''),
+(287, 286, 4, 287, 'test-12', 1, '2013-04-21 20:39:37', '2013-04-21 22:02:20', 'Public', 'es', 'quwebmecamaq', 'TEST 12 (d) (d)', NULL, NULL, '', '', '', ''),
+(288, 286, 4, 288, 'test-12', 2, '2013-04-21 20:39:37', '2013-04-21 22:02:14', 'Public', 'es', 'quwebmecamaq', 'TEST 12 (d) (d)', NULL, NULL, '', '', '', ''),
+(289, 281, 4, 289, 'test-2', 0, '0000-00-00 00:00:00', '2013-04-21 23:59:17', 'Public', 'en', 'quwebmecamaq', 'TEST 2 (d) (d)', NULL, NULL, '', '', '', ''),
+(290, 281, 4, 290, 'test-2', 0, '0000-00-00 00:00:00', '2013-04-21 23:59:36', 'Public', 'fr', 'quwebmecamaq', 'TEST 2 (d) (d)', NULL, NULL, '', '', '', ''),
+(291, 0, 4, 291, 'test-1', 7, '2013-04-21 19:37:17', '2013-04-22 00:08:28', 'Public', 'es', 'quwebmecamaq', 'TEST 1 (d) (d) (d)', NULL, NULL, '<span class="iconb" data-icon="&#xe015;"></span>', '', '', ''),
+(292, 291, 4, 292, 'test-2', 1, '2013-04-21 19:37:22', '2013-04-21 22:01:28', 'Public', 'es', 'quwebmecamaq', 'TEST 2 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(293, 292, 4, 293, 'test-3', 1, '2013-04-21 19:37:30', '2013-04-21 22:01:57', 'Public', 'es', 'quwebmecamaq', 'TEST 3 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(294, 293, 4, 294, 'test-4', 1, '2013-04-21 19:37:37', '2013-04-21 22:02:42', 'Public', 'es', 'quwebmecamaq', 'TEST 4 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(295, 294, 4, 295, 'test-10', 1, '2013-04-21 20:39:08', '2013-04-21 22:02:35', 'Public', 'es', 'quwebmecamaq', 'TEST 10 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(296, 295, 4, 296, 'test-11', 1, '2013-04-21 20:39:19', '2013-04-21 22:02:28', 'Public', 'es', 'quwebmecamaq', 'TEST 11 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(297, 296, 4, 297, 'test-12', 1, '2013-04-21 20:39:37', '2013-04-21 22:02:20', 'Public', 'es', 'quwebmecamaq', 'TEST 12 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(298, 296, 4, 298, 'test-12', 2, '2013-04-21 20:39:37', '2013-04-21 22:02:14', 'Public', 'es', 'quwebmecamaq', 'TEST 12 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(299, 291, 4, 299, 'test-2', 0, '0000-00-00 00:00:00', '2013-04-21 23:59:17', 'Public', 'en', 'quwebmecamaq', 'TEST 2 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(300, 291, 4, 300, 'test-2', 0, '0000-00-00 00:00:00', '2013-04-21 23:59:36', 'Public', 'fr', 'quwebmecamaq', 'TEST 2 (d) (d) (d)', NULL, NULL, '', '', '', ''),
+(301, 0, 4, 301, 'test-1', 6, '2013-04-21 19:37:17', '2013-04-22 00:08:28', 'Public', 'es', 'quwebmecamaq', 'TEST 1 (d) (d)', NULL, NULL, '<span class="iconb" data-icon="&#xe015;"></span>', '', '', ''),
+(302, 301, 4, 302, 'test-2', 1, '2013-04-21 19:37:22', '2013-04-21 22:01:28', 'Public', 'es', 'quwebmecamaq', 'TEST 2 (d) (d)', NULL, NULL, '', '', '', ''),
+(303, 302, 4, 303, 'test-3', 1, '2013-04-21 19:37:30', '2013-04-21 22:01:57', 'Public', 'es', 'quwebmecamaq', 'TEST 3 (d) (d)', NULL, NULL, '', '', '', ''),
+(304, 303, 4, 304, 'test-4', 1, '2013-04-21 19:37:37', '2013-04-21 22:02:42', 'Public', 'es', 'quwebmecamaq', 'TEST 4 (d) (d)', NULL, NULL, '', '', '', ''),
+(305, 304, 4, 305, 'test-10', 1, '2013-04-21 20:39:08', '2013-04-21 22:02:35', 'Public', 'es', 'quwebmecamaq', 'TEST 10 (d) (d)', NULL, NULL, '', '', '', ''),
+(306, 305, 4, 306, 'test-11', 1, '2013-04-21 20:39:19', '2013-04-21 22:02:28', 'Public', 'es', 'quwebmecamaq', 'TEST 11 (d) (d)', NULL, NULL, '', '', '', ''),
+(307, 306, 4, 307, 'test-12', 1, '2013-04-21 20:39:37', '2013-04-21 22:02:20', 'Public', 'es', 'quwebmecamaq', 'TEST 12 (d) (d)', NULL, NULL, '', '', '', ''),
+(308, 306, 4, 308, 'test-12', 2, '2013-04-21 20:39:37', '2013-04-21 22:02:14', 'Public', 'es', 'quwebmecamaq', 'TEST 12 (d) (d)', NULL, NULL, '', '', '', ''),
+(309, 301, 4, 309, 'test-2', 0, '0000-00-00 00:00:00', '2013-04-21 23:59:17', 'Public', 'en', 'quwebmecamaq', 'TEST 2 (d) (d)', NULL, NULL, '', '', '', ''),
+(310, 301, 4, 310, 'test-2', 0, '0000-00-00 00:00:00', '2013-04-21 23:59:36', 'Public', 'fr', 'quwebmecamaq', 'TEST 2 (d) (d)', NULL, NULL, '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de la taula `qu-content`
+--
+
+CREATE TABLE IF NOT EXISTS `qu-content` (
+  `id_content` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `id_author` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `id_lang` bigint(20) NOT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `order` int(11) NOT NULL DEFAULT '0',
+  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `status` varchar(20) COLLATE utf8_unicode_ci DEFAULT 'publish',
+  `lang` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `parameters` text COLLATE utf8_unicode_ci,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `summary` text COLLATE utf8_unicode_ci,
+  `content` longtext COLLATE utf8_unicode_ci,
+  `icon` text COLLATE utf8_unicode_ci,
+  `meta_title` text COLLATE utf8_unicode_ci,
+  `meta_description` text COLLATE utf8_unicode_ci,
+  `meta_keywords` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id_content`),
+  KEY `name` (`name`),
+  KEY `type_status_date` (`status`,`date`,`id_content`),
+  KEY `id_parent` (`id_parent`),
+  KEY `author` (`id_author`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=155 ;
+
+--
+-- Bolcant dades de la taula `qu-content`
+--
+
+INSERT INTO `qu-content` (`id_content`, `id_parent`, `id_author`, `id_lang`, `name`, `order`, `date`, `modified`, `status`, `lang`, `parameters`, `title`, `summary`, `content`, `icon`, `meta_title`, `meta_description`, `meta_keywords`) VALUES
+(126, 269, 4, 126, 'test-8', 1, '2013-04-21 19:37:58', '2013-04-21 22:01:46', 'Public', 'es', 'quwebmecamaq', 'TEST 8 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(127, 270, 4, 127, 'test-5', 1, '2013-04-21 19:37:46', '2013-04-21 22:18:11', 'Public', 'es', 'quwebmecamaq', 'TEST 5 R (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(128, 274, 4, 128, 'test-22', 1, '2013-04-21 20:40:57', '2013-04-21 20:40:57', 'Public', 'es', 'quwebmecamaq', 'TEST 22 (d)duplicateByIdParent (d)2', NULL, NULL, '', NULL, NULL, NULL),
+(129, 274, 4, 129, 'test22-3', 2, '2013-04-21 20:41:21', '2013-04-21 20:41:21', 'Public', 'es', 'quwebmecamaq', 'TEST22-3 (d)duplicateByIdParent (d)2', NULL, NULL, '', NULL, NULL, NULL),
+(131, 268, 4, 131, 'wwwwww', 1, '2013-04-22 01:02:22', '2013-04-22 01:02:22', 'Public', 'es', 'quwebmecamaq', 'wwwwww', NULL, NULL, '', NULL, NULL, NULL),
+(132, 268, 4, 132, 'wwwww', 2, '2013-04-22 01:02:29', '2013-04-22 01:02:29', 'Public', 'es', 'quwebmecamaq', 'wwwww', NULL, NULL, '', NULL, NULL, NULL),
+(133, 268, 4, 131, 'wwwwww', 0, '0000-00-00 00:00:00', '2013-04-22 01:02:39', 'Public', 'en', 'quwebmecamaq', 'wwwwwwsafsfdaasdfaddsfa', NULL, NULL, '', NULL, NULL, NULL),
+(134, 281, 4, 134, 'wwwwww', 1, '2013-04-22 01:02:22', '2013-04-22 01:02:22', 'Public', 'es', 'quwebmecamaq', 'wwwwww (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(135, 281, 4, 135, 'wwwww', 2, '2013-04-22 01:02:29', '2013-04-22 01:02:29', 'Public', 'es', 'quwebmecamaq', 'wwwww (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(136, 281, 4, 136, 'wwwwww', 0, '0000-00-00 00:00:00', '2013-04-22 01:02:39', 'Public', 'en', 'quwebmecamaq', 'wwwwwwsafsfdaasdfaddsfa (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(137, 282, 4, 137, 'test-8', 1, '2013-04-21 19:37:58', '2013-04-21 22:01:46', 'Public', 'es', 'quwebmecamaq', 'TEST 8 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(138, 283, 4, 138, 'test-5', 1, '2013-04-21 19:37:46', '2013-04-21 22:18:11', 'Public', 'es', 'quwebmecamaq', 'TEST 5 R (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(139, 287, 4, 139, 'test-22', 1, '2013-04-21 20:40:57', '2013-04-21 20:40:57', 'Public', 'es', 'quwebmecamaq', 'TEST 22 (d)duplicateByIdParent (d)2 (d)duplicateByIdParent (d)2', NULL, NULL, '', NULL, NULL, NULL),
+(140, 287, 4, 140, 'test22-3', 2, '2013-04-21 20:41:21', '2013-04-21 20:41:21', 'Public', 'es', 'quwebmecamaq', 'TEST22-3 (d)duplicateByIdParent (d)2 (d)duplicateByIdParent (d)2', NULL, NULL, '', NULL, NULL, NULL),
+(141, 291, 4, 141, 'wwwwww', 1, '2013-04-22 01:02:22', '2013-04-22 01:02:22', 'Public', 'es', 'quwebmecamaq', 'wwwwww (d)duplicate (d)3 (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(142, 291, 4, 142, 'wwwww', 2, '2013-04-22 01:02:29', '2013-04-22 01:02:29', 'Public', 'es', 'quwebmecamaq', 'wwwww (d)duplicate (d)3 (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(143, 291, 4, 143, 'wwwwww', 0, '0000-00-00 00:00:00', '2013-04-22 01:02:39', 'Public', 'en', 'quwebmecamaq', 'wwwwwwsafsfdaasdfaddsfa (d)duplicate (d)3 (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(144, 292, 4, 144, 'test-8', 1, '2013-04-21 19:37:58', '2013-04-21 22:01:46', 'Public', 'es', 'quwebmecamaq', 'TEST 8 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(145, 293, 4, 145, 'test-5', 1, '2013-04-21 19:37:46', '2013-04-21 22:18:11', 'Public', 'es', 'quwebmecamaq', 'TEST 5 R (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(146, 297, 4, 146, 'test-22', 1, '2013-04-21 20:40:57', '2013-04-21 20:40:57', 'Public', 'es', 'quwebmecamaq', 'TEST 22 (d)duplicateByIdParent (d)2 (d)duplicateByIdParent (d)2 (d)duplicateByIdParent (d)2', NULL, NULL, '', NULL, NULL, NULL),
+(147, 297, 4, 147, 'test22-3', 2, '2013-04-21 20:41:21', '2013-04-21 20:41:21', 'Public', 'es', 'quwebmecamaq', 'TEST22-3 (d)duplicateByIdParent (d)2 (d)duplicateByIdParent (d)2 (d)duplicateByIdParent (d)2', NULL, NULL, '', NULL, NULL, NULL),
+(148, 301, 4, 148, 'wwwwww', 1, '2013-04-22 01:02:22', '2013-04-22 01:02:22', 'Public', 'es', 'quwebmecamaq', 'wwwwww (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(149, 301, 4, 149, 'wwwww', 2, '2013-04-22 01:02:29', '2013-04-22 01:02:29', 'Public', 'es', 'quwebmecamaq', 'wwwww (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(150, 301, 4, 150, 'wwwwww', 0, '0000-00-00 00:00:00', '2013-04-22 01:02:39', 'Public', 'en', 'quwebmecamaq', 'wwwwwwsafsfdaasdfaddsfa (d)duplicate (d)3', NULL, NULL, '', NULL, NULL, NULL),
+(151, 302, 4, 151, 'test-8', 1, '2013-04-21 19:37:58', '2013-04-21 22:01:46', 'Public', 'es', 'quwebmecamaq', 'TEST 8 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(152, 303, 4, 152, 'test-5', 1, '2013-04-21 19:37:46', '2013-04-21 22:18:11', 'Public', 'es', 'quwebmecamaq', 'TEST 5 R (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(153, 307, 4, 153, 'test-22', 1, '2013-04-21 20:40:57', '2013-04-21 20:40:57', 'Public', 'es', 'quwebmecamaq', 'TEST 22 (d)duplicateByIdParent (d)2 (d)duplicateByIdParent (d)2', NULL, NULL, '', NULL, NULL, NULL),
+(154, 307, 4, 154, 'test22-3', 2, '2013-04-21 20:41:21', '2013-04-21 20:41:21', 'Public', 'es', 'quwebmecamaq', 'TEST22-3 (d)duplicateByIdParent (d)2 (d)duplicateByIdParent (d)2', NULL, NULL, '', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de la taula `qu-features`
+--
+
+CREATE TABLE IF NOT EXISTS `qu-features` (
+  `id_features` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `id_author` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `id_lang` bigint(20) NOT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `order` int(11) NOT NULL DEFAULT '0',
+  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `status` varchar(20) COLLATE utf8_unicode_ci DEFAULT 'publish',
+  `lang` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `parameters` text COLLATE utf8_unicode_ci,
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `summary` text COLLATE utf8_unicode_ci,
+  `content` longtext COLLATE utf8_unicode_ci,
+  `icon` text COLLATE utf8_unicode_ci,
+  `meta_title` text COLLATE utf8_unicode_ci,
+  `meta_description` text COLLATE utf8_unicode_ci,
+  `meta_keywords` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id_features`),
+  KEY `name` (`name`),
+  KEY `type_status_date` (`status`,`date`,`id_features`),
+  KEY `id_parent` (`id_parent`),
+  KEY `author` (`id_author`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=35 ;
+
+--
+-- Bolcant dades de la taula `qu-features`
+--
+
+INSERT INTO `qu-features` (`id_features`, `id_parent`, `id_author`, `id_lang`, `name`, `order`, `date`, `modified`, `status`, `lang`, `parameters`, `title`, `summary`, `content`, `icon`, `meta_title`, `meta_description`, `meta_keywords`) VALUES
+(31, 269, 4, 31, 'test-8', 1, '2013-04-21 19:38:06', '2013-04-21 22:01:35', 'Public', 'es', NULL, 'TEST 8 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(32, 282, 4, 32, 'test-8', 1, '2013-04-21 19:38:06', '2013-04-21 22:01:35', 'Public', 'es', NULL, 'TEST 8 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(33, 292, 4, 33, 'test-8', 1, '2013-04-21 19:38:06', '2013-04-21 22:01:35', 'Public', 'es', NULL, 'TEST 8 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL),
+(34, 302, 4, 34, 'test-8', 1, '2013-04-21 19:38:06', '2013-04-21 22:01:35', 'Public', 'es', NULL, 'TEST 8 (d)duplicateByIdParent (d)1 (d)duplicateByIdParent (d)1', NULL, NULL, '', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+
 --
 -- Base de dades: `qumodules-app-demo`
 --
@@ -399,3 +590,5 @@ CREATE TABLE IF NOT EXISTS `user_role_linker` (
 
 INSERT INTO `user_role_linker` (`user_id`, `role_id`) VALUES
 (1, 'admin');
+
+

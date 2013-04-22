@@ -5,7 +5,6 @@
  * */
 $.ajax({url:"/wiserver.php"});
 
-
 var url = 'ws://127.0.0.1:9000';
 
 
@@ -42,7 +41,16 @@ socket.onmessage = function(evt){
 
         log(server.message);
 
-        mChat.append('<span class="userC">' +  server.date + ' <strong>' + server.name + '</strong>: '  +  server.message + '</span><br>');
+        mChat.append(
+            '<span class="chat-send">' +
+                '<span class="chat-date">' + server.date   +
+                '<span class="iconb" data-icon=&#xe205;>' +
+                '</span>' +
+                '</span>' +
+                '<span class="chat-name"><span class="iconb" data-icon=&#xe1e0;></span>' + server.name  + '</span>' +
+                '<span class="chat-message"> '     + server.message   + '</span>' +
+            '</span>'
+        );
 
         dataPost.css('display','block');
 
@@ -52,9 +60,7 @@ socket.onmessage = function(evt){
 
     }else if( server.type == 'listUsers' ) {
 
-        if(id_user){
-            lisChat.load("/chat/list");
-        }
+        lisChat.load("/chat/list");
         numConnect.html(server.usersCount);
 
     }else if( server.type == 'onOpen' ) {
@@ -64,19 +70,29 @@ socket.onmessage = function(evt){
         dataPost.attr('data-resource',server.id_resource);
         id_user = dataPost.attr('id');
 
+        if(!id_user)
+        {
+            dataPost.attr('id',server.id_resource);
+            dataPost.attr('data-name',server.id_resource);
+            dataPost.attr('data-resource',server.id_resource);
+
+            name    = server.id_resource;
+            id_user = server.id_resource;
+        }
 
         socket.send( 'onOpen' +'|'+ name +'|'+ id_user  +'|'+ server.id_resource + '|' + server.id_chat + '|||' + 'onOpen');
 
-        if(id_user){
-            mChat.load("/chat/messages/" + id_user);
-        }
+        mChat.load("/chat/messages/" + id_user);
 
     }
-
 };
 
+/*
+* operate well at the beginning, but after awhile, it connect well, but  after it disconnected
+* */
+
 function log(data){
-    //console.log(data);
+ //console.log(data);
 }
 
 
@@ -114,7 +130,15 @@ function Chat(){
         texChat.scrollTop =  texChat.scrollHeight;
         texChat.attr('value','');
 
-        $('.mChat').append(time + ' ' + '<strong>' + name + '</strong>:   '  +  message  + '  <br>');
+        $('.mChat').append(
+            '<span class="chat-send-local">' +
+            '<span class="chat-date">'  + time   +
+            '<span class="iconb" data-icon=&#xe205;></span>' +
+            '</span>' +
+            '<span class="chat-name"><span class="iconb" data-icon=&#xe1e0;></span>'          + name      + '</span>' +
+            '<span class="chat-message"> '     + message   + '</span>' +
+            '</span>'
+        );
 
         play_sound('/qu-admin/audio/chat.mp3');
 
@@ -191,4 +215,3 @@ function play_sound(url){
         $('body').append(sound);
     }
 }
-
