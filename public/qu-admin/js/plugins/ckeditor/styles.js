@@ -91,6 +91,12 @@ CKEDITOR.stylesSet.add( 'default', [
 		attributes: { 'class': 'right' }
 	},
 
+    {
+        name: 'Send box',
+        element: 'p',
+        attributes: { 'class': 'send-box' }
+    },
+
 	{
 		name: 'Compact table',
 		element: 'table',

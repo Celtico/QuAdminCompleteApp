@@ -1,14 +1,14 @@
 <?php
 
 
-    // /Applications/MAMP/bin/php/php5.3.14/bin/php /Users/cel/Desktop/QuModules/web/wiserver.php
+    // /Applications/MAMP/bin/php/php5.3.14/bin/php /Users/cel/Desktop/QuModules/web/server_data.php
     // /Applications/MAMP/bin/php/php5.4.4/bin/php /Users/cel/Desktop/QuModules/composer.phar update
 
     // cd /Users/cel/Desktop/QuModules
     // /Applications/MAMP/bin/php/php5.4.4/bin/php composer.phar update
 
-    //$id = '46.16.58.120'; $port = '9000';
-    $id = '127.0.0.1'; $port = '9000';
+    $id = '46.16.58.120'; $port = '9000';
+    //$id = '127.0.0.1'; $port = '9000';
 
     chdir(dirname(__DIR__));
 
@@ -19,7 +19,7 @@
     use Ratchet\WebSocket\WsServer;
     use React\EventLoop\Factory;
     use React\Socket\Server as Reactor;
-    use QuChat\Server\QuChatNoData;
+    use QuChat\Server\QuChatData;
 
     echo 'v10'."\n";
 
@@ -33,6 +33,6 @@
         echo 'Message: ' .$e->getMessage();
     }
 
-    $webServer = new IoServer(new WsServer(new QuChatNoData()),$webSock);
+    $webServer = new IoServer(new WsServer(new QuChatData()),$webSock);
 
     $loop->run();
