@@ -1,3 +1,6 @@
+Not have the functionalities to 100%, can be used for production, but watchful
+==================================
+
 Tested the installation with the composer, ie had to make some adjustments to routes and something more, and now everything works properly!
 
 This version has bugs that are small am waiting to solve.
