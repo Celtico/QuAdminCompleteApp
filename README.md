@@ -1,6 +1,4 @@
-Not have the functionalities to 100%, can be used for production, but watchful
-==================================
-and report the error and possible improvements
+Not have the functionalities to 100%, can be used for production, but watchful, and report the error and possible improvements
 ==================================
 
 Tested the installation with the composer, ie had to make some adjustments to routes and something more, and now everything works properly!
