@@ -1,4 +1,24 @@
 
+
+
+--
+-- Estructura de la taula `qu-translator`
+--
+
+CREATE TABLE IF NOT EXISTS `qu-translator` (
+  `id_translator` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_parent` int(11) NOT NULL,
+  `id_author` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `id_lang` bigint(20) NOT NULL,
+  `lang` varchar(3) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `title` text COLLATE utf8_unicode_ci NOT NULL,
+  `order` int(11) NOT NULL DEFAULT '0',
+  `status` varchar(20) COLLATE utf8_unicode_ci DEFAULT 'publish',
+  PRIMARY KEY (`id_translator`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+
 --
 -- Estructura de la taula `qu-categories`
 --
